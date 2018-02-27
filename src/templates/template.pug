@@ -8,7 +8,10 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     block title
-      title Мишка 
+      title Мишка
     link(rel='stylesheet' href='assets/styles/app.min.css')
   body
-    block content
+    .wrapper
+      include common/_header
+      block content
+      include common/_footer

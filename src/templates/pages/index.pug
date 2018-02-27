@@ -1,0 +1,101 @@
+extends ../template
+
+block title
+  title Главная страница
+
+block content
+  main.page-main
+
+    section.goods
+      header.goods__header
+        h2.goods__promo-title Милые штуки ручной работы для дома
+      ul.goods__list
+        li.goods__item
+          a.goods__link(href="#")
+            span.goods__name Предметы интерьера
+            .goods__picture
+              img(src="http://placehold.it/41x62", alt="Предметы интерьера")
+        li.goods__item.goods__item--bg--dark
+          a.goods__link(href="#")
+            span.goods__name Детские игрушки
+            .goods__picture
+              img(src="http://placehold.it/61x61", alt="Детские игрушки")
+
+    article.offer
+      header.offer__header
+        h2.offer__title Вязанные корзинки
+        span.offer__type Товар недели
+      section.offer__desc
+        .offer__text Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
+        table.offer__list
+          tr
+            td.offer__property Цвет:
+            td.offer__value «Тиффани»/серый:
+          tr
+            td.offer__property Диаметр:
+            td.offer__value 25 см
+          tr
+            td.offer__property Высота:
+            td.offer__value 15 см
+      .offer__wrapper
+        .offer__picture
+          img(src="http://placehold.it/260x315", alt="Вязанные корзинки: товар недели")
+        .offer__price Цена: 990 руб.
+        a.offer__button.button(href="form.html") Заказать
+
+    section.advantages
+      h2.advantages__title Коротко о нас
+      ul.advantages__list
+        li.advantages__item
+          .advantages__picture
+            img.advantages__picture-image(src="http://placehold.it/33x15", alt="")
+          p.advantages__text Экологически чистые материалы
+        li.advantages__item
+          .advantages__picture
+            img.advantages__picture-image(src="http://placehold.it/47x27", alt="")
+          p.advantages__text Скандинавский стиль по российской цене
+        li.advantages__item
+          .advantages__picture
+            img.advantages__picture-image(src="http://placehold.it/34x27", alt="")
+          p.advantages__text Увеличивает лайки на фотографиях
+        li.advantages__item
+          .advantages__picture
+            img.advantages__picture-image(src="http://placehold.it/35x34", alt="")
+          p.advantages__text Связано вручную с любовью и умилением
+        li.advantages__item
+          .advantages__picture
+            img.advantages__picture-image(src="http://placehold.it/55x23", alt="")
+          p.advantages__text Поддержка отечественного производителя
+        li.advantages__item
+          .advantages__picture
+            img.advantages__picture-image(src="http://placehold.it/33x32", alt="")
+          p.advantages__text Поставляется в подарочной упаковке
+
+    section.reviews
+      .reviews__wrapper.slider
+        h2.reviews__tile Отзывы
+        .reviews__list
+          blockquote.reviews__item
+            p.reviws__text.
+              Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+            p.reviews__author
+              cite.reviews__author-name Анастасия Красильникова
+              span.reviews__author-nickname @misssssiskras
+          button.reviews__prev(type="button") Предыдущий отзыв
+          button.reviews__next(type="button") Следующий отзыв
+        a.review__button.button(href="#") Написать
+
+    section.contacts
+      .contacts__wrapper
+        h3.contacts__title Контакты
+        table.contacts__list
+          tr
+            td.contacts__type e-mail:
+            td.contacts__value info@mimimishkashop.ru
+          tr
+            td.contacts__type адрес:
+            td.contacts__value г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101
+        .contacts__map
+          .map
+            img.map__image(src="http://placehold.it/320x457", alt="Как до нас добраться")
+        a.contacts__button.button(href="#") Напишите нам
