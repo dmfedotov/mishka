@@ -2,3 +2,67 @@ extends ../template
 
 block title
   title Форма заказа
+
+block content
+  main.page-main
+
+    section.order
+      .order__promo
+        h2.order__title Вязание на заказ
+      header.order__header
+        p.order__text Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+      .order__form
+        form.form(action="#" method="post")
+          .form__section
+            p.form__type Тип
+            .form__field
+              input.form__input(type="radio", id="radio-1" name="form-radio" checked)
+              label.form__value(for="radio-1") Аксессуар для интерьера
+            .form__field
+              input.form__input(type="radio", id="radio-2" name="form-radio")
+              label.form__value(for="radio-2") Детская игрушка
+          .form__section
+            p.form__type Цвет
+            .form__field
+              input.form__input(type="checkbox", id="check-1" name="form-check" checked)
+              label.form__value(for="check-1") Белый
+            .form__field
+              input.form__input(type="checkbox", id="check-2" name="form-check" checked)
+              label.form__value(for="check-2") Серый
+            .form__field
+              input.form__input(type="checkbox", id="check-3" name="form-check")
+              label.form__value(for="check-3") «Тиффани»
+            .form__field
+              input.form__input(type="checkbox", id="check-4" name="form-check")
+              label.form__value(for="check-4") Черный
+            .form__field
+              input.form__input(type="checkbox", id="check-5" name="form-check")
+              label.form__value(for="check-5") Розовый
+            .form__field
+              input.form__input(type="checkbox", id="check-6" name="form-check")
+              label.form__value(for="check-6") Оранжевый
+          .form__section
+            p.form__type ФИО
+            .form__field
+              label.form__value(for="form-name") Имя:
+              input.form__input(type="text", id="form-name" name="form-name" placeholder="Введите ваше имя*")
+            .form__field
+              label.form__value(for="form-lastname") Фамилия:
+              input.form__input(type="text", id="form-lastname" name="form-lastname" placeholder="Укажите фамилию*")
+            .form__field
+              label.form__value(for="form-patronymic") Отчество:
+              input.form__input(type="text", id="form-patronymic" name="form-patronymic" placeholder="Отчество, если желаете")
+          .form__section
+            p.form__type Тел
+            .form__field
+              input.form__input(type="tel", name="form-phone" placeholder="+7 ХХХ ХХ ХХ*")
+          .form__section
+            p.form__type e-mail
+            .form__field
+              input.form__input(type="email", name="form-email" placeholder="Ваш Email*")
+          .form__section
+            p.form__type доп
+            .form__field
+              textarea.form__textarea(name="form-textarea", cmls="30", rows="10") Опишите все ваши пожелания к заказу
+          .form__important *Поля обязательны для заполнения
+          button.form__submit.button(type="submit") Отправить заказ
