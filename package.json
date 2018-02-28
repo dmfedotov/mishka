@@ -5,7 +5,7 @@
   "description": "Проект «Мишка»",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
-    "stylelint": "8.1.x",
+    "stylelint": "9.1.x",
     "stylelint-config-htmlacademy": "0.1.x"
   },
   "scripts": {
