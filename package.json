@@ -2,20 +2,49 @@
   "name": "mishka",
   "version": "0.1.0",
   "private": true,
-  "description": "Проект «Мишка»",
+  "description": "Личный проект «Мишка» от HTML Academy",
   "devDependencies": {
+    "autoprefixer": "7.1.x",
+    "browser-sync": "^2.23.6",
+    "del": "^3.0.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "normalize.css": "^8.0.0",
+    "gulp-postcss": "7.0.x",
     "@htmlacademy/editorconfig-cli": "1.x",
-    "stylelint": "9.1.x",
-    "stylelint-config-htmlacademy": "0.1.x"
+    "stylelint": "8.1.x",
+    "stylelint-config-htmlacademy": "0.1.x",
+    "gulp-cheerio": "^0.6.3",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.6.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-svg-sprites": "^4.1.2",
+    "gulp-svgmin": "^1.2.4",
+    "gulp.spritesmith": "^6.9.0",
+    "pug": "^2.0.0-rc.4"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint .",
-    "test": "npm run editorconfig"
+    "stylelint": "stylelint 'src/sass/**/*.scss' --syntax scss",
+    "test": "npm run editorconfig && npm run stylelint",
+    "build": "gulp style",
+    "start": "gulp"
   },
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
   "editorconfig-cli": [
     "*.html",
-    "*.json"
+    "*.json",
+    "*.js",
+    "src/scripts/**/*.js",
+    "src/images/**/*.svg",
+    "src/sass/**/*.{sass,scss}"
   ],
   "engines": {
     "node": "9.2"
