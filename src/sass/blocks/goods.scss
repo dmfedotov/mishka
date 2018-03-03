@@ -1,0 +1,21 @@
+.goods__header {
+  background: $color-lightgray;
+}
+
+.goods__link {
+  display: flex;
+
+  text-decoration: none;
+
+  background: $color-green;
+
+  &--bg--dark {
+    background: $color-green-dark;
+  }
+}
+
+.goods__name {
+  font-weight: 600;
+  font-size: 19px;
+  color: $color-white;
+}
