@@ -6,14 +6,17 @@
 
 body,
 html {
-  width: 100%;
+  min-width: 320px;
   height: 100%;
 
+  font-weight: 400;
   font-size: 15px;
   line-height: 1.5;
-  font-family: "Open Sans";
-  font-weight: 400;
+  font-family: "Open Sans", Arial, sans-serif;
   color: $color-gray;
+
+  background-color: $color-white;
+
   -webkit-font-smoothing: antialiased;
 }
 
@@ -35,4 +38,12 @@ h6 {
   margin: 0;
 
   font-weight: normal;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+  border-style: none;
 }

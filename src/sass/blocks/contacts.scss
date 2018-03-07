@@ -1,5 +1,134 @@
+.contacts {
+  margin-bottom: 40px;
+}
+
+.contacts__wrapper {
+  box-sizing: initial;
+  width: 260px;
+  margin: 0 auto;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
 .contacts__title {
+  margin-bottom: 38px;
+
   font-weight: 600;
   font-size: 17px;
   color: $color-black;
+}
+
+.contacts__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__item {
+  display: flex;
+  margin-bottom: 38px;
+}
+
+.contacts__type {
+  flex-shrink: 0;
+  width: 78px;
+}
+
+.contacts__value {
+  margin: 0;
+
+  &--underlined {
+    border-bottom: 1px solid #62d1ba;
+  }
+}
+
+.contacts__map {
+  margin-bottom: 40px;
+}
+
+.contacts__button {
+  width: 260px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts__wrapper {
+    width: 668px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  .contacts__title {
+    width: 668px;
+    margin-bottom: 45px;
+    padding-right: 64px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .contacts__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .contacts__item {
+    align-items: flex-start;
+    width: 50%;
+    margin-bottom: 60px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .contacts__button {
+    width: 230px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1050px;
+    margin-top: 70px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .contacts__wrapper {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    box-sizing: initial;
+    width: 350px;
+    margin: 0;
+    padding-right: 0;
+    padding-left: 175px;
+  }
+
+  .contacts__title {
+    width: 350px;
+    padding-top: 70px;
+    padding-right: 0;
+  }
+
+  .contacts__list {
+    flex-direction: column;
+  }
+
+  .contacts__item {
+    width: 300px;
+    margin-bottom: 35px;
+  }
+
+  .contacts__map {
+    margin-bottom: 0;
+  }
+
+  .contacts__button {
+    margin-top: -57px;
+    margin-right: 0;
+    margin-left: 175px;
+  }
 }

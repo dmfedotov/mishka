@@ -1,11 +1,114 @@
+.advantages {
+  margin-bottom: 55px;
+}
+
+.advantages__wrapper {
+  box-sizing: initial;
+  width: 260px;
+  margin: 0 auto;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
 .advantages__title {
+  margin-bottom: 28px;
+  padding-top: 32px;
+
   font-weight: 600;
   font-size: 25px;
   color: $color-black;
+}
+
+.advantages__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.advantages__item {
+  position: relative;
+
+  padding-top: 80px;
+}
+
+.advantages__icon {
+  position: absolute;
+  top: 20px;
+  left: 10px;
 }
 
 .advantages__text {
   font-weight: 600;
   font-size: 17px;
   color: $color-black;
+}
+
+@media (min-width: $tablet-width) {
+  .advantages {
+    margin-bottom: 76px;
+  }
+
+  .advantages__wrapper {
+    width: 668px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  .advantages__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .advantages__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+
+  .advantages__item {
+    width: 50%;
+    margin-bottom: 28px;
+  }
+
+  .advantages__item--hand-made {
+    order: 4;
+  }
+  .advantages__item--scandinavian-style {
+    order: 8;
+  }
+
+  .advantages__item--domestic-support {
+    order: 12;
+  }
+
+  .advantages__item--popularity-increase {
+    order: 16;
+  }
+
+  .advantages__item--gift-delivery {
+    order: 20;
+  }
+
+
+  .advantages__text {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+@media (min-width:$desktop-width) {
+  .advantages__wrapper {
+    box-sizing: border-box;
+    width: 1050px;
+    margin-bottom: 85px;
+    padding: 0;
+  }
+
+  .advantages__title {
+    margin-left: 175px;
+    padding-top: 60px;
+  }
+
+  .advantages__list {
+    margin-left: 175px;
+  }
 }

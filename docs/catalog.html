@@ -9,19 +9,21 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="page-header"><a class="page-header__logo" href="">
-          <div class="logo"><img src="assets/images/content/logotype-mobile.svg" alt="Мишка" width="86" height="35"/></div></a>
+      <header class="page-header">
         <nav class="main-nav">
-          <button class="main-nav__toggle button" type="button">Войти</button>
-          <div class="main-nav__wrapper">
+          <div class="main-nav__wrapper"><a class="main-nav__logo" href="">
+              <div class="logo"><img class="logo__image" src="http://placehold.it/86x35" alt="Мишка" width="86" height="35"/></div></a>
+            <button class="main-nav__toggle" type="button" title="Открыть/закрыть меню"><span class="visually-hidden">Открыть/закрыть меню</span></button>
             <ul class="main-nav__list site-list">
-              <li class="site-list__item site-list__item--active"><a class="site-list__link" href="index.html">Главная</a></li>
               <li class="site-list__item"><a class="site-list__link" href="catalog.html">Каталог товаров</a></li>
               <li class="site-list__item"><a class="site-list__link" href="form.html">Вязание на заказ</a></li>
-              <li class="site-list__item"><a class="site-list__link" href="#">Поиск по сайту</a></li>
+              <li class="site-list__item site-list__item--new-goods"><a class="site-list__link" href="new-goods.html">Новые поступления</a></li>
+              <li class="site-list__item site-list__item--sale"><a class="site-list__link" href="sale.html">Распродажа</a></li>
             </ul>
             <ul class="main-nav__list user-list">
-              <li class="user-list__item"><a class="user-list__login" href="login.html">Корзина: пока пуста</a></li>
+              <li class="user-list__item user-list__item--search"><a class="user-list__link user-list__link--search" href="#">Поиск по сайту</a></li>
+              <li class="user-list__item user-list__item--basket"><a class="user-list__link user-list__link--basket" href="login.html">Корзина: пока пуста</a></li>
+              <li class="user-list__item user-list__item--delivery"><a class="user-list__link user-list__link--delivery" href="#">Бесплатная доставка по России</a></li>
             </ul>
           </div>
         </nav>
@@ -74,7 +76,8 @@
         </section>
       </main>
       <footer class="page-footer">
-        <div class="page-footer__wrapper">
+        <div class="page-footer__wrapper"><a class="page-footer__logo">
+            <div class="logo" href="index.html"><img class="logo__image" src="#" alt="Мишка" width="86" height="35"/></div></a>
           <div class="page-footer__social social">
             <ul class="social__list">
               <li class="social__item"><a class="social__link social-link--instagram" href="#"></a></li>
@@ -82,7 +85,7 @@
               <li class="social__item"><a class="social__link social-link--twitter" href="#"></a></li>
             </ul>
           </div>
-          <div class="page-footer__copyright copyright"><b class="copyright__text">Разработано</b><a class="copyright__link" href="https://htmlacademy.ru"><img class="copyright__link-image" src="assets/images/icons/copyright.svg" alt="Разработано HTML Academy"/></a></div>
+          <div class="page-footer__copyright copyright"><b class="copyright__text">Разработано</b><a class="copyright__icon" href="https://htmlacademy.ru"><img class="copyright__icon-image" src="assets/images/icons/copyright.svg" alt="Разработано HTML Academy"/></a></div>
         </div>
       </footer>
     </div>

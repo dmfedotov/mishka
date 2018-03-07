@@ -1,0 +1,69 @@
+.page-footer {
+  background: $color-lightgray;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  box-sizing: initial;
+  width: 260px;
+  margin: 0 auto;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.page-footer__logo {
+  display: none;
+}
+
+// Временно для высоты социалок
+.page-footer__social {
+  height: 80px;
+
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.page-footer__copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 22px;
+  padding-right: 40px;
+  padding-bottom: 22px;
+  padding-left: 40px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 668px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  .page-footer__logo {
+    display: block;
+  }
+
+  .page-footer__social {
+    width: 142px; // временная ширина
+
+    border-bottom: none;
+  }
+
+  .page-footer__copyright {
+    justify-content: flex-start;
+    padding: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer__wrapper {
+    box-sizing: border-box;
+    width: 1050px;
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+}
