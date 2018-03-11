@@ -38,79 +38,111 @@
               <div class="order__promo">
                 <p class="order__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
               </div>
-              <div class="form__section">
-                <p class="form__type">Тип</p>
-                <div class="form__field">
-                  <input class="form__input" type="radio" id="radio-1" name="form-radio" checked="checked"/>
-                  <label class="form__value" for="radio-1">Аксессуар для интерьера</label>
-                </div>
-                <div class="form__field">
-                  <input class="form__input" type="radio" id="radio-2" name="form-radio"/>
-                  <label class="form__value" for="radio-2">Детская игрушка</label>
-                </div>
-              </div>
-              <div class="form__section">
-                <p class="form__type">Цвет</p>
-                <div class="form__field">
-                  <input class="form__input" type="checkbox" id="check-1" name="form-check" checked="checked"/>
-                  <label class="form__value" for="check-1">Белый</label>
-                </div>
-                <div class="form__field">
-                  <input class="form__input" type="checkbox" id="check-2" name="form-check" checked="checked"/>
-                  <label class="form__value" for="check-2">Серый</label>
-                </div>
-                <div class="form__field">
-                  <input class="form__input" type="checkbox" id="check-3" name="form-check"/>
-                  <label class="form__value" for="check-3">«Тиффани»</label>
-                </div>
-                <div class="form__field">
-                  <input class="form__input" type="checkbox" id="check-4" name="form-check"/>
-                  <label class="form__value" for="check-4">Черный</label>
-                </div>
-                <div class="form__field">
-                  <input class="form__input" type="checkbox" id="check-5" name="form-check"/>
-                  <label class="form__value" for="check-5">Розовый</label>
-                </div>
-                <div class="form__field">
-                  <input class="form__input" type="checkbox" id="check-6" name="form-check"/>
-                  <label class="form__value" for="check-6">Оранжевый</label>
+              <div class="form__wrapper">
+                <div class="form__section">
+                  <h3 class="form__type">Тип</h3>
+                  <div class="form__inner">
+                    <label class="form__field">
+                      <input class="form__radio-elem visually-hidden" type="radio" id="radio-1" name="form-radio" checked="checked"/>
+                      <div class="form__radio-fake"></div>
+                      <div class="form__value">Аксессуар для интерьера</div>
+                    </label>
+                    <label class="form__field">
+                      <input class="form__radio-elem visually-hidden" type="radio" id="radio-2" name="form-radio"/>
+                      <div class="form__radio-fake"></div>
+                      <div class="form__value">Детская игрушка</div>
+                    </label>
+                  </div>
                 </div>
               </div>
-              <div class="form__section">
-                <p class="form__type">ФИО</p>
-                <div class="form__field">
-                  <label class="form__value" for="form-name">Имя:</label>
-                  <input class="form__input" type="text" id="form-name" name="form-name" placeholder="Введите ваше имя*"/>
-                </div>
-                <div class="form__field">
-                  <label class="form__value" for="form-lastname">Фамилия:</label>
-                  <input class="form__input" type="text" id="form-lastname" name="form-lastname" placeholder="Укажите фамилию*"/>
-                </div>
-                <div class="form__field">
-                  <label class="form__value" for="form-patronymic">Отчество:</label>
-                  <input class="form__input" type="text" id="form-patronymic" name="form-patronymic" placeholder="Отчество, если желаете"/>
+              <div class="form__wrapper form__wrapper--gray">
+                <div class="form__section">
+                  <h3 class="form__type">Цвет</h3>
+                  <div class="form__inner form__inner--columns">
+                    <label class="form__field">
+                      <input class="form__check-elem visually-hidden" type="checkbox" id="check-1" name="form-check" checked="checked"/>
+                      <div class="form__check-fake"></div>
+                      <div class="form__value">Белый</div>
+                    </label>
+                    <label class="form__field">
+                      <input class="form__check-elem visually-hidden" type="checkbox" id="check-2" name="form-check" checked="checked"/>
+                      <div class="form__check-fake"></div>
+                      <div class="form__value">Серый</div>
+                    </label>
+                    <label class="form__field">
+                      <input class="form__check-elem visually-hidden" type="checkbox" id="check-3" name="form-check"/>
+                      <div class="form__check-fake"></div>
+                      <div class="form__value">«Тиффани»</div>
+                    </label>
+                    <label class="form__field">
+                      <input class="form__check-elem visually-hidden" type="checkbox" id="check-4" name="form-check"/>
+                      <div class="form__check-fake"></div>
+                      <div class="form__value">Черный</div>
+                    </label>
+                    <label class="form__field">
+                      <input class="form__check-elem visually-hidden" type="checkbox" id="check-5" name="form-check"/>
+                      <div class="form__check-fake"></div>
+                      <div class="form__value">Розовый</div>
+                    </label>
+                    <label class="form__field">
+                      <input class="form__check-elem visually-hidden" type="checkbox" id="check-6" name="form-check"/>
+                      <div class="form__check-fake"></div>
+                      <div class="form__value">Оранжевый</div>
+                    </label>
+                  </div>
                 </div>
               </div>
-              <div class="form__section">
-                <p class="form__type">Тел</p>
-                <div class="form__field">
-                  <input class="form__input" type="tel" name="form-phone" placeholder="+7 ХХХ ХХ ХХ*"/>
+              <div class="form__wrapper form__wrapper--name">
+                <div class="form__section">
+                  <h3 class="form__type">ФИО</h3>
+                  <div class="form__inner">
+                    <div class="form__field form__field--full-name form__field--underlined">
+                      <label class="form__value" for="form-name">Имя:</label>
+                      <input class="form__input" type="text" id="form-name" name="form-name" placeholder="Введите ваше имя*"/>
+                    </div>
+                    <div class="form__field form__field--full-name form__field--underlined">
+                      <label class="form__value" for="form-lastname">Фамилия:</label>
+                      <input class="form__input" type="text" id="form-lastname" name="form-lastname" placeholder="Укажите фамилию*"/>
+                    </div>
+                    <div class="form__field form__field--full-name form__field--underlined">
+                      <label class="form__value" for="form-patronymic">Отчество:</label>
+                      <input class="form__input" type="text" id="form-patronymic" name="form-patronymic" placeholder="Отчество, если желаете"/>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="form__section">
-                <p class="form__type">e-mail</p>
-                <div class="form__field">
-                  <input class="form__input" type="email" name="form-email" placeholder="Ваш Email*"/>
+              <div class="form__wrapper form__wrapper--contacts form__wrapper--gray">
+                <div class="form__section">
+                  <h3 class="form__type">Тел</h3>
+                  <div class="form__inner">
+                    <div class="form__field">
+                      <input class="form__input" type="tel" name="form-phone" placeholder="+7 ХХХ ХХ ХХ*"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__section">
+                  <h3 class="form__type">e-mail</h3>
+                  <div class="form__inner">
+                    <div class="form__field">
+                      <input class="form__input" type="email" name="form-email" placeholder="Ваш Email*"/>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="form__section">
-                <p class="form__type">доп</p>
-                <div class="form__field">
-                  <textarea class="form__textarea" name="form-textarea" cmls="30" rows="10">Опишите все ваши пожелания к заказу</textarea>
+              <div class="form__wrapper form__wrapper--comment">
+                <div class="form__section">
+                  <h3 class="form__type">доп</h3>
+                  <div class="form__inner">
+                    <div class="form__field">
+                      <textarea class="form__textarea" name="form-textarea" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="form__important">*Поля обязательны для заполнения</div>
-              <button class="form__submit button" type="submit">Отправить заказ</button>
+              <div class="form__footer">
+                <div class="form__important">*Поля обязательны для заполнения</div>
+                <button class="form__submit button" type="submit">Отправить заказ</button>
+              </div>
             </form>
           </div>
         </section>
