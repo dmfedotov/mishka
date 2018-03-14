@@ -13,56 +13,76 @@ block content
         form.form(action="#" method="post")
           .order__promo
             p.order__text Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
-          .form__section
-            p.form__type Тип
-            .form__field
-              input.form__input(type="radio", id="radio-1" name="form-radio" checked)
-              label.form__value(for="radio-1") Аксессуар для интерьера
-            .form__field
-              input.form__input(type="radio", id="radio-2" name="form-radio")
-              label.form__value(for="radio-2") Детская игрушка
-          .form__section
-            p.form__type Цвет
-            .form__field
-              input.form__input(type="checkbox", id="check-1" name="form-check" checked)
-              label.form__value(for="check-1") Белый
-            .form__field
-              input.form__input(type="checkbox", id="check-2" name="form-check" checked)
-              label.form__value(for="check-2") Серый
-            .form__field
-              input.form__input(type="checkbox", id="check-3" name="form-check")
-              label.form__value(for="check-3") «Тиффани»
-            .form__field
-              input.form__input(type="checkbox", id="check-4" name="form-check")
-              label.form__value(for="check-4") Черный
-            .form__field
-              input.form__input(type="checkbox", id="check-5" name="form-check")
-              label.form__value(for="check-5") Розовый
-            .form__field
-              input.form__input(type="checkbox", id="check-6" name="form-check")
-              label.form__value(for="check-6") Оранжевый
-          .form__section
-            p.form__type ФИО
-            .form__field
-              label.form__value(for="form-name") Имя:
-              input.form__input(type="text", id="form-name" name="form-name" placeholder="Введите ваше имя*")
-            .form__field
-              label.form__value(for="form-lastname") Фамилия:
-              input.form__input(type="text", id="form-lastname" name="form-lastname" placeholder="Укажите фамилию*")
-            .form__field
-              label.form__value(for="form-patronymic") Отчество:
-              input.form__input(type="text", id="form-patronymic" name="form-patronymic" placeholder="Отчество, если желаете")
-          .form__section
-            p.form__type Тел
-            .form__field
-              input.form__input(type="tel", name="form-phone" placeholder="+7 ХХХ ХХ ХХ*")
-          .form__section
-            p.form__type e-mail
-            .form__field
-              input.form__input(type="email", name="form-email" placeholder="Ваш Email*")
-          .form__section
-            p.form__type доп
-            .form__field
-              textarea.form__textarea(name="form-textarea", cmls="30", rows="10") Опишите все ваши пожелания к заказу
-          .form__important *Поля обязательны для заполнения
-          button.form__submit.button(type="submit") Отправить заказ
+          .form__wrapper
+            .form__section
+              h3.form__type Тип
+              .form__inner
+                label.form__field
+                  input.form__radio-elem.visually-hidden(type="radio", id="radio-1" name="form-radio" checked)
+                  .form__radio-fake
+                  .form__value Аксессуар для интерьера
+                label.form__field
+                  input.form__radio-elem.visually-hidden(type="radio", id="radio-2" name="form-radio")
+                  .form__radio-fake
+                  .form__value Детская игрушка
+          .form__wrapper.form__wrapper--gray
+            .form__section
+              h3.form__type Цвет
+              .form__inner.form__inner--columns
+                label.form__field
+                  input.form__check-elem.visually-hidden(type="checkbox", id="check-1" name="form-check" checked)
+                  .form__check-fake
+                  .form__value Белый
+                label.form__field
+                  input.form__check-elem.visually-hidden(type="checkbox", id="check-2" name="form-check" checked)
+                  .form__check-fake
+                  .form__value Серый
+                label.form__field
+                  input.form__check-elem.visually-hidden(type="checkbox", id="check-3" name="form-check")
+                  .form__check-fake
+                  .form__value «Тиффани»
+                label.form__field
+                  input.form__check-elem.visually-hidden(type="checkbox", id="check-4" name="form-check")
+                  .form__check-fake
+                  .form__value Черный
+                label.form__field
+                  input.form__check-elem.visually-hidden(type="checkbox", id="check-5" name="form-check")
+                  .form__check-fake
+                  .form__value Розовый
+                label.form__field
+                  input.form__check-elem.visually-hidden(type="checkbox", id="check-6" name="form-check")
+                  .form__check-fake
+                  .form__value Оранжевый
+          .form__wrapper.form__wrapper--name
+            .form__section
+              h3.form__type ФИО
+              .form__inner
+                .form__field.form__field--full-name.form__field--underlined
+                  label.form__value(for="form-name") Имя:
+                  input.form__input(type="text", id="form-name" name="form-name" placeholder="Введите ваше имя*")
+                .form__field.form__field--full-name.form__field--underlined
+                  label.form__value(for="form-lastname") Фамилия:
+                  input.form__input(type="text", id="form-lastname" name="form-lastname" placeholder="Укажите фамилию*")
+                .form__field.form__field--full-name.form__field--underlined
+                  label.form__value(for="form-patronymic") Отчество:
+                  input.form__input(type="text", id="form-patronymic" name="form-patronymic" placeholder="Отчество, если желаете")
+          .form__wrapper.form__wrapper--contacts.form__wrapper--gray
+            .form__section
+              h3.form__type Тел
+              .form__inner
+                .form__field
+                  input.form__input(type="tel", name="form-phone" placeholder="+7 ХХХ ХХ ХХ*")
+            .form__section
+              h3.form__type e-mail
+              .form__inner
+                .form__field
+                  input.form__input(type="email", name="form-email" placeholder="Ваш Email*")
+          .form__wrapper.form__wrapper--comment
+            .form__section
+              h3.form__type доп
+              .form__inner
+                .form__field
+                  textarea.form__textarea(name="form-textarea", placeholder="Опишите все ваши пожелания к заказу")
+          .form__footer
+            .form__important *Поля обязательны для заполнения
+            button.form__submit.button(type="submit") Отправить заказ

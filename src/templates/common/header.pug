@@ -1,0 +1,24 @@
+header.page-header
+  nav.main-nav
+    .main-nav__wrapper
+      a.main-nav__logo(href="")
+        .logo
+          img.logo__image(src="http://placehold.it/86x35", alt="Мишка" width="86" height="35")
+      button.main-nav__toggle(type="button" title="Открыть/закрыть меню")
+        span.visually-hidden Открыть/закрыть меню
+      ul.main-nav__list.site-list
+        li.site-list__item
+          a.site-list__link(href="catalog.html") Каталог товаров
+        li.site-list__item
+          a.site-list__link(href="form.html") Вязание на заказ
+        li.site-list__item.site-list__item--new-goods
+          a.site-list__link(href="new-goods.html") Новые поступления
+        li.site-list__item.site-list__item--sale
+          a.site-list__link(href="sale.html") Распродажа
+      ul.main-nav__list.user-list
+        li.user-list__item.user-list__item--search
+          a.user-list__link.user-list__link--search(href="#") Поиск по сайту
+        li.user-list__item.user-list__item--basket
+          a.user-list__link.user-list__link--basket(href="login.html") Корзина: пока пуста
+        li.user-list__item.user-list__item--delivery
+          a.user-list__link.user-list__link--delivery(href="#") Бесплатная доставка по России

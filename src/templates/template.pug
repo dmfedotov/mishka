@@ -1,5 +1,5 @@
-include ./common/_variables
-include ./common/_mixins
+include ./common/variables
+include ./common/mixins
 
 <!DOCTYPE html>
 html(lang="ru")
@@ -9,9 +9,9 @@ html(lang="ru")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     block title
       title Мишка
-    link(rel='stylesheet' href='assets/styles/app.min.css')
+    link(rel='stylesheet' href='assets/css/style.min.css')
   body
     .wrapper
-      include common/_header
+      include common/header
       block content
-      include common/_footer
+      include common/footer
