@@ -1,5 +1,5 @@
 .site-list {
-  display: none;
+  // display: none;
 }
 
 .site-list__item--new-goods,
@@ -7,8 +7,15 @@
   display: none;
 }
 
+.site-list__item {
+  border-top: 1px solid #ececec;
+}
+
 .site-list__link {
   display: block;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 76px;
 
   font-weight: 600;
   font-size: 17px;
@@ -28,6 +35,8 @@
     width: 142px;
     margin-right: 25px;
 
+    border-top: none;
+
     &:nth-of-type(2) {
       margin-right: 0;
     }
@@ -35,6 +44,8 @@
 
   .site-list__link {
     padding-top: 18px;
+    padding-bottom: 0;
+    padding-left: 0;
 
     font-size: 15px;
     line-height: 1.6;
