@@ -20,9 +20,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 23px;
+  padding-top: 21px;
   padding-right: 30px;
-  padding-bottom: 23px;
+  padding-bottom: 20px;
   padding-left: 30px;
 
   text-decoration: none;
@@ -44,6 +44,11 @@
 }
 
 @media (min-width: $tablet-width) {
+  .goods {
+    min-height: 746px;
+    margin-top: -60px;
+  }
+
   .goods__header {
     width: 668px;
     margin: 0 auto;
@@ -58,6 +63,12 @@
 
   .goods__item {
     width: 50%;
+  }
+
+  .goods__link {
+    padding-top: 29px;
+    padding-bottom: 29px;
+    padding-left: 37px;
   }
 }
 

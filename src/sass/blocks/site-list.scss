@@ -1,5 +1,5 @@
 .site-list {
-  // display: none;
+  display: none;
 }
 
 .site-list__item--new-goods,
@@ -70,10 +70,18 @@
   .site-list__item--new-goods,
   .site-list__item--sale {
     display: block;
+
+    .site-list__link {
+      font-size: 15px;
+      line-height: 1.6;
+    }
   }
 
   .site-list__link {
-    padding-top: 30px;
+    padding-top: 32px;
     padding-bottom: 22px;
+
+    font-size: 17px;
+    line-height: 1.411;
   }
 }

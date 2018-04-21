@@ -1,27 +1,54 @@
 .content-title {
   width: 260px;
+  margin-top: -50px;
 
   font-weight: 600;
   font-size: 27px;
   line-height: 30px;
   text-align: center;
   color: $color-black;
+
+  &_form {
+    margin-top: -5px;
+  }
+
+  &_catalog {
+    margin-top: -8px;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .content-title {
     width: 668px;
+    margin-top: 123px;
 
     font-size: 43px;
     line-height: 50px;
+
+    &_form {
+      margin-top: 12px;
+    }
+
+    &_catalog {
+      margin-top: -60px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .content-title {
     width: 1050px;
+    margin-top: 138px;
 
     font-size: 53px;
     line-height: 57px;
+
+    &_form {
+      margin-top: 18px;
+    }
+
+    &_catalog {
+      margin-top: -10px;
+    }
   }
 }

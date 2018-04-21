@@ -1,5 +1,5 @@
 .offer {
-  margin-top: 25px;
+  margin-top: 29px;
 }
 
 .offer__wrapper {
@@ -45,6 +45,7 @@
 }
 
 .offer__property {
+  width: 33%;
   padding-top: 10px;
   padding-bottom: 10px;
 
@@ -81,6 +82,7 @@
 
 @media (min-width: $tablet-width) {
   .offer {
+    margin-top: 46px;
     margin-bottom: 33px;
   }
 
@@ -96,7 +98,7 @@
   .offer__title {
     flex-grow: 1;
     width: 560px;
-    margin-bottom: 48px;
+    margin-bottom: 55px;
 
     font-size: 43px;
     line-height: 50px;
@@ -126,7 +128,7 @@
   }
 
   .offer__list {
-    margin-bottom: 56px;
+    margin-bottom: 59px;
   }
 
   .offer__picture-image {
@@ -140,7 +142,7 @@
   }
 
   .offer__price {
-    margin-bottom: 33px;
+    margin-bottom: 36px;
 
     font-size: 20px;
     line-height: 24px;
@@ -153,7 +155,7 @@
 
 @media (min-width: $desktop-width) {
   .offer {
-    margin-top: 70px;
+    margin-top: 64px;
     margin-bottom: 63px;
   }
 
@@ -167,7 +169,7 @@
     z-index: 5;
 
     width: 860px;
-    margin-top: 55px;
+    margin-top: 59px;
 
     font-size: 53px;
     line-height: 57px;
@@ -175,8 +177,8 @@
 
   .offer__type {
     order: -1;
-    margin-top: 70px;
-    margin-right: 58px;
+    margin-top: 75px;
+    margin-right: 50px;
     padding-right: 0;
     padding-left: 47px;
   }
@@ -200,6 +202,10 @@
 
   .offer__buy {
     margin-left: 175px;
+  }
+
+  .offer__price {
+    margin-bottom: 34px;
   }
 
   .offer__button {

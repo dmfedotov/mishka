@@ -2,8 +2,14 @@
   padding-bottom: 10px;
 }
 
+.form__wrapper--comment {
+  .form__field {
+    margin-bottom: 0;
+  }
+}
+
 .form__important {
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 
   font-size: 14px;
 }
@@ -11,11 +17,13 @@
 .form__submit {
   width: 100%;
   margin-bottom: 55px;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 
 .form__type {
   display: flex;
-  margin-bottom: 22px;
+  margin-bottom: 21px;
 
   font-weight: 600;
   font-size: 17px;
@@ -33,6 +41,10 @@
     margin-left: 22px;
 
     background-color: $color-green;
+  }
+
+  &_margin_bottom {
+    margin-bottom: 29px;
   }
 }
 
@@ -55,7 +67,7 @@
   align-items: initial;
 
   .form__value {
-    margin-bottom: 10px;
+    margin-bottom: 24px;
   }
 }
 
@@ -104,6 +116,7 @@
 .form__value {
   font-weight: 600;
   font-size: 17px;
+  line-height: 1.07;
   color: $color-black;
 }
 
@@ -130,6 +143,8 @@
   border: 2px solid $color-gray;
   outline: none;
 
+  resize: none;
+
   &::placeholder {
     color: rgba($color-gray, 0.3);
   }
@@ -143,7 +158,7 @@
   }
 
   .form__wrapper {
-    padding-top: 50px;
+    padding-top: 56px;
     padding-bottom: 30px;
   }
 
@@ -152,6 +167,9 @@
   }
 
   .form__wrapper--name {
+    padding-top: 64px;
+    padding-bottom: 24px;
+
     .form__type {
       padding-top: 0;
     }
@@ -169,6 +187,11 @@
     .form__input {
       padding-left: 17px;
     }
+  }
+
+  .form__wrapper--comment {
+    padding-top: 36px;
+    padding-bottom: 54px;
   }
 
   .form__type {
@@ -190,12 +213,18 @@
     flex-wrap: wrap;
 
     .form__field {
-      width: 50%;
+      width: 237px;
+      margin-right: 25px;
+
+      &:nth-child(even) {
+        margin-right: 0;
+      }
     }
   }
 
   .form__field--full-name {
     flex-direction: row;
+    margin-bottom: 32px;
 
     .form__value {
       margin-right: 25px;
@@ -203,6 +232,8 @@
   }
 
   .form__input {
+    padding-left: 18px;
+
     font-size: 19px;
     line-height: 1;
   }
@@ -272,13 +303,27 @@
 
   .form__inner--columns {
     .form__field {
-      width: 262px;
+      margin-right: 25px;
+
+      &:nth-child(even) {
+        margin-right: 25px;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
     }
   }
 
   .form__wrapper--name {
     .form__inner {
       padding-right: 175px;
+    }
+  }
+
+  .form__wrapper--gray {
+    .form__input {
+      padding-bottom: 13px;
     }
   }
 
@@ -293,6 +338,8 @@
   }
 
   .form__wrapper--comment {
+    padding-bottom: 47px;
+
     .form__inner {
       padding-right: 175px;
     }

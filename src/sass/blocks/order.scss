@@ -10,6 +10,7 @@
   min-height: 177px;
 
   background: $color-lightgray;
+  border-top: 1px solid #dfdfdf;
 }
 
 .order__form {
@@ -26,6 +27,7 @@
   margin-bottom: 20px;
 
   font-size: 13px;
+  line-height: 1.84;
 }
 
 @media (min-width: $tablet-width) {
@@ -35,13 +37,13 @@
 
   .order__header {
     min-height: 225px;
-    margin-top: -55px;
+    margin-top: -59px;
   }
 
   .order__form {
     width: auto;
     margin: 0;
-    padding-top: 80px;
+    padding-top: 71px;
     padding-right: 0;
     padding-left: 0;
   }
@@ -60,6 +62,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .order__form {
+    padding-top: 150px;
+  }
+
   .order__promo {
     width: 1050px;
   }

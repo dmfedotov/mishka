@@ -5,13 +5,13 @@
 .contacts__wrapper {
   box-sizing: initial;
   width: 260px;
-  margin: 0 auto;
+  margin: 0 auto 8px;
   padding-right: 30px;
   padding-left: 30px;
 }
 
 .contacts__title {
-  margin-bottom: 38px;
+  margin-bottom: 28px;
 
   font-weight: 600;
   font-size: 17px;
@@ -21,11 +21,13 @@
 .contacts__list {
   display: flex;
   flex-direction: column;
+
+  line-height: 2;
 }
 
 .contacts__item {
   display: flex;
-  margin-bottom: 38px;
+  margin-bottom: 29px;
 }
 
 .contacts__type {
@@ -52,10 +54,19 @@
 }
 
 @media (min-width: $tablet-width) {
+  .contacts {
+    margin-bottom: 90px;
+  }
+
   .contacts__wrapper {
     width: 668px;
+    margin-bottom: 0;
     padding-right: 50px;
     padding-left: 50px;
+  }
+
+  .contacts__map {
+    margin-bottom: 56px;
   }
 
   .contacts__title {
@@ -111,6 +122,9 @@
     width: 350px;
     padding-top: 70px;
     padding-right: 0;
+
+    font-size: 53px;
+    line-height: 1.07;
   }
 
   .contacts__list {
@@ -127,7 +141,7 @@
   }
 
   .contacts__button {
-    margin-top: -57px;
+    margin-top: -52px;
     margin-right: 0;
     margin-left: 175px;
   }

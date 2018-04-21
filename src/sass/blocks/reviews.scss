@@ -1,5 +1,5 @@
 .reviews {
-  margin-bottom: 42px;
+  margin-bottom: 89px;
 }
 
 .reviews__wrapper {
@@ -11,11 +11,15 @@
 }
 
 .reviews__title {
-  margin-bottom: 30px;
+  margin-bottom: 21px;
 
   font-weight: 600;
   font-size: 25px;
   color: $color-black;
+}
+
+.reviews__list {
+  line-height: 2;
 }
 
 .reviews__item {
@@ -24,13 +28,13 @@
 
 .reviews__text {
   margin-top: 0;
-  margin-bottom: 35px;
+  margin-bottom: 22px;
 }
 
 .reviews__author {
   display: flex;
   flex-direction: column;
-  margin-bottom: 35px;
+  margin-bottom: 27px;
 }
 
 .reviews__author-name {
@@ -38,12 +42,15 @@
 
   font-weight: 600;
   font-size: 17px;
+  line-height: 24px;
   color: $color-black;
+  font-style: normal;
 }
 
 .reviews__author-nickname {
   font-weight: 400;
   font-size: 17px;
+  line-height: 30px;
   color: $color-gray;
 }
 
@@ -68,7 +75,7 @@
 
 @media (min-width: $tablet-width) {
   .reviews {
-    margin-bottom: 64px;
+    margin-bottom: 60px;
   }
 
   .reviews__wrapper {
@@ -77,7 +84,7 @@
     justify-content: space-between;
     align-items: flex-start;
     width: 668px;
-    padding-top: 80px;
+    padding-top: 66px;
     padding-right: 50px;
     padding-bottom: 85px;
     padding-left: 50px;
@@ -91,7 +98,7 @@
   .reviews__button {
     order: 2;
     padding-right: 40px;
-    padding-left: 40px;
+    padding-left: 36px;
   }
 
   .reviews__list {
@@ -108,7 +115,7 @@
   }
 
   .reviews__text {
-    margin-bottom: 60px;
+    margin-bottom: 55px;
 
     font-size: 17px;
     line-height: 30px;
@@ -120,6 +127,8 @@
   }
 
   .reviews__author-name {
+    margin-bottom: 0;
+
     font-size: 18px;
     line-height: 24px;
   }
@@ -136,12 +145,13 @@
 
 @media (min-width: $desktop-width) {
   .reviews {
-    margin-bottom: 80px;
+    margin-bottom: 70px;
   }
 
   .reviews__wrapper {
     box-sizing: border-box;
     width: 1050px;
+    padding-top: 48px;
     padding-right: 0;
     padding-bottom: 90px;
     padding-left: 175px;
@@ -156,8 +166,13 @@
     width: 1050px;
   }
 
+  .reviews__button {
+    margin-top: 10px;
+    margin-bottom: 45px;
+  }
+
   .reviews__text {
-    margin-bottom: 48px;
+    margin-bottom: 39px;
   }
 
   .reviews__author {
