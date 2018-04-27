@@ -1,0 +1,27 @@
+.content-title {
+  width: 260px;
+
+  font-weight: 600;
+  font-size: 27px;
+  line-height: 30px;
+  text-align: center;
+  color: $color-black;
+}
+
+@media (min-width: $tablet-width) {
+  .content-title {
+    width: 668px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .content-title {
+    width: 1050px;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
+}

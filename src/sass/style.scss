@@ -1,6 +1,30 @@
 @import "../../node_modules/normalize.css/normalize";
 
-@import "../styles/layout/_variables";
-@import "../styles/layout/_fonts";
-@import "../styles/layout/_mixins";
-@import "../styles/layout/_settings";
+@import "../sass/layout/variables";
+@import "../sass/layout/fonts";
+@import "../sass/layout/mixins";
+@import "../sass/layout/settings";
+
+@import "../sass/blocks/wrapper";
+@import "../sass/blocks/visually-hidden";
+@import "../sass/blocks/page-header";
+@import "../sass/blocks/logo";
+@import "../sass/blocks/main-nav";
+@import "../sass/blocks/site-list";
+@import "../sass/blocks/user-list";
+@import "../sass/blocks/page-main";
+@import "../sass/blocks/button";
+@import "../sass/blocks/content-title";
+@import "../sass/blocks/goods";
+@import "../sass/blocks/offer";
+@import "../sass/blocks/advantages";
+@import "../sass/blocks/reviews";
+@import "../sass/blocks/contacts";
+@import "../sass/blocks/map";
+@import "../sass/blocks/order";
+@import "../sass/blocks/form";
+@import "../sass/blocks/catalog";
+@import "../sass/blocks/production";
+@import "../sass/blocks/videoplayer";
+@import "../sass/blocks/copyright";
+@import "../sass/blocks/page-footer";

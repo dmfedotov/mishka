@@ -1,0 +1,15 @@
+.copyright__text {
+  font-weight: 600;
+  font-size: 19px;
+  color: $color-black;
+}
+
+.copyright__icon {
+  font-size: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .copyright__text {
+    margin-right: 30px;
+  }
+}

@@ -109,7 +109,7 @@ function clean() {
 
 // следим за src и запускаем нужные таски (компиляция и пр.)
 function watch() {
-  gulp.watch(paths.style.src, style);
+  gulp.watch(paths.styles.src, style);
   gulp.watch(paths.templates.src, html);
   gulp.watch(paths.images.src, images);
   gulp.watch(paths.fonts.src, fonts);
