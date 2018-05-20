@@ -1,5 +1,5 @@
 .offer {
-  margin-top: 25px;
+  margin-top: 29px;
 }
 
 .offer__wrapper {
@@ -7,7 +7,13 @@
   width: 260px;
   margin: 0 auto;
   padding-right: 30px;
+  padding-bottom: 42px;
   padding-left: 30px;
+
+  background-image: url("../images/icons/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-position: center bottom;
+  background-size: 320px 7px;
 }
 
 .offer__title {
@@ -45,6 +51,7 @@
 }
 
 .offer__property {
+  width: 33%;
   padding-top: 10px;
   padding-bottom: 10px;
 
@@ -53,11 +60,8 @@
   text-align: left;
 }
 
-.offer__picture-image {
-  display: block;
+.offer__picture {
   margin-bottom: 25px;
-
-  background-color: $color-lightgray;
 }
 
 .offer__buy {
@@ -76,11 +80,11 @@
 
 .offer__button {
   width: 100%;
-  margin-bottom: 42px;
 }
 
 @media (min-width: $tablet-width) {
   .offer {
+    margin-top: 46px;
     margin-bottom: 33px;
   }
 
@@ -91,12 +95,14 @@
     width: 668px;
     padding-right: 50px;
     padding-left: 50px;
+
+    background-size: 768px 15px;
   }
 
   .offer__title {
     flex-grow: 1;
     width: 560px;
-    margin-bottom: 48px;
+    margin-bottom: 55px;
 
     font-size: 43px;
     line-height: 50px;
@@ -114,7 +120,7 @@
 
   .offer__desc {
     width: 290px;
-    margin-bottom: 150px;
+    margin-bottom: 136px;
   }
 
   .offer__text {
@@ -126,34 +132,29 @@
   }
 
   .offer__list {
-    margin-bottom: 56px;
+    margin-bottom: 59px;
   }
 
-  .offer__picture-image {
-    width: 334px;
+  .offer__picture {
     margin-bottom: 0;
   }
 
   .offer__buy {
     width: 290px;
-    margin-top: -150px;
+    margin-top: -136px;
   }
 
   .offer__price {
-    margin-bottom: 33px;
+    margin-bottom: 36px;
 
     font-size: 20px;
     line-height: 24px;
-  }
-
-  .offer__button {
-    margin-bottom: 69px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .offer {
-    margin-top: 70px;
+    margin-top: 64px;
     margin-bottom: 63px;
   }
 
@@ -161,13 +162,15 @@
     box-sizing: border-box;
     width: 1050px;
     padding: 0;
+
+    background-size: 1050px 23px;
   }
 
   .offer__title {
     z-index: 5;
 
     width: 860px;
-    margin-top: 55px;
+    margin-top: 59px;
 
     font-size: 53px;
     line-height: 57px;
@@ -175,8 +178,8 @@
 
   .offer__type {
     order: -1;
-    margin-top: 70px;
-    margin-right: 58px;
+    margin-top: 75px;
+    margin-right: 50px;
     padding-right: 0;
     padding-left: 47px;
   }
@@ -193,13 +196,16 @@
     margin-bottom: 110px;
   }
 
-  .offer__picture-image {
-    width: 525px;
+  .offer__picture {
     margin-top: -160px;
   }
 
   .offer__buy {
     margin-left: 175px;
+  }
+
+  .offer__price {
+    margin-bottom: 34px;
   }
 
   .offer__button {

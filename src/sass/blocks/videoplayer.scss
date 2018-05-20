@@ -1,9 +1,20 @@
-.videoplayer__title {
-  font-weight: 600;
-  font-size: 17px;
-  color: $color-black;
+.videoplayer {
+  position: relative;
 }
 
-.videoplayer__text {
-  font-size: 13px;
+.videoplayer__toggle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 100px;
+  height: 76px;
+
+  background-color: transparent;
+  background-image: url("../images/icons/icon-play.svg");
+  background-repeat: no-repeat;
+  border: none;
+  outline: none;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
 }

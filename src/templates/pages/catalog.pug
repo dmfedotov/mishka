@@ -8,41 +8,65 @@ block content
 
     section.catalog
       header.catalog__header
-        h2.content-title Каталог товаров
+        h2.content-title.content-title--catalog Каталог товаров
       .catalog__wrapper
         ul.catalog__list
           li.catalog__item
-            .catalog__picture
-              img.catalog__picture-image(src="http://placehold.it/260x195", alt="Зайчик-попрыгайчик")
+            picture
+              source(media="(min-width: 1200px)"
+                 srcset="assets/images/content/photo-hare-desktop@1x.jpg 1x, assets/images/content/photo-hare-desktop@2x.jpg 2x")
+              source(media="(min-width: 768px)"
+                 srcset="assets/images/content/photo-hare-tablet@1x.jpg 1x, assets/images/content/photo-hare-tablet@2x.jpg 2x")
+              img.catalog__picture(src="assets/images/content/photo-hare-mobile@1x.jpg", srcset="assets/images/content/photo-hare-mobile@2x.jpg 2x" alt="Зайчик попрыгайчик")
             .catalog__desc
               h2.catalog__title Зайчик-попрыгайчик
               p.catalog__info Рост 30 см, вес 200 г
               .catalog__price
                 span.catalog__price-value 1 200 руб.
-                .catalog__icon
+                svg.catalog__icon(width="21" height="19")
+                  use(xlink:href="assets/images/icons/sprite.svg#icon-cart")
           li.catalog__item
-            .catalog__picture
-              img.catalog__picture-image(src="http://placehold.it/260x195", alt="Корзинка для белья")
+            picture
+              source(media="(min-width: 1200px)"
+                 srcset="assets/images/content/photo-bowl-desktop@1x.jpg 1x, assets/images/content/photo-bowl-desktop@2x.jpg 2x")
+              source(media="(min-width: 768px)"
+                 srcset="assets/images/content/photo-bowl-tablet@1x.jpg 1x, assets/images/content/photo-bowl-tablet@2x.jpg 2x")
+              img.catalog__picture(src="assets/images/content/photo-bowl-mobile@1x.jpg", srcset="assets/images/content/photo-bowl-mobile@2x.jpg 2x" alt="Корзинка для белья")
             .catalog__desc
               h2.catalog__title Корзинка для белья
               p.catalog__info Диаметр 15 см, высота 10 см
               .catalog__price
                 span.catalog__price-value 690 руб.
-                .catalog__icon
+                svg.catalog__icon(width="21" height="19")
+                  use(xlink:href="assets/images/icons/sprite.svg#icon-cart")
           li.catalog__item
-            .catalog__picture
-              img.catalog__picture-image(src="http://placehold.it/260x195", alt="Большая корзинка для игрушек")
+            picture
+              source(media="(min-width: 1200px)"
+                 srcset="assets/images/content/photo-toys-desktop@1x.jpg 1x, assets/images/content/photo-toys-desktop@2x.jpg 2x")
+              source(media="(min-width: 768px)"
+                 srcset="assets/images/content/photo-toys-tablet@1x.jpg 1x, assets/images/content/photo-toys-tablet@2x.jpg 2x")
+              img.catalog__picture(src="assets/images/content/photo-toys-mobile@1x.jpg", srcset="assets/images/content/photo-toys-mobile@2x.jpg 2x" alt="Большая корзинка для игрушек")
             .catalog__desc
               h2.catalog__title Большая корзинка для игрушек
               p.catalog__info Диаметр 30 см, высота 30 см
               .catalog__price
                 span.catalog__price-value 1 500 руб.
-                .catalog__icon
+                svg.catalog__icon(width="21" height="19")
+                  use(xlink:href="assets/images/icons/sprite.svg#icon-cart")
     section.production
       .production__wrapper
         h2.production__title Процесс производства
+          svg.production__icon(width="33" height="22")
+            use(xlink:href="assets/images/icons/sprite.svg#icon-video")
         .production__videoplayer.videoplayer
-          img.videoplayer__image(src="http://placehold.it/260x150", alt="Процесс производства")
+          picture
+            source(media="(min-width: 1200px)"
+                 srcset="assets/images/content/video-desktop@1x.jpg 1x, assets/images/content/video-desktop@2x.jpg 2x")
+            source(media="(min-width: 768px)"
+                 srcset="assets/images/content/video-tablet@1x.jpg 1x, assets/images/content/video-tablet@2x.jpg 2x")
+            img.production__picture(src="assets/images/content/video-mobile@1x.jpg", srcset="assets/images/content/video-mobile@2x.jpg 2x" alt="Процесс производства")
+          button.videoplayer__toggle
+            span.visually-hidden Воспроизвести/Пауза
         .production__content
           p.production__text По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
-          a.catalog.button(href="form.html") Сделать заказ
+          a.button.button_catalog(href="form.html") Сделать заказ

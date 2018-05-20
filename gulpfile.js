@@ -39,7 +39,7 @@ const paths = {
     dest: 'docs/assets/images/'
   },
   icons: {
-    src: 'src/images/icons/*.png',
+    src: 'src/images/icons/*.svg',
     dest: 'src/images/icons/'
   },
   fonts: {

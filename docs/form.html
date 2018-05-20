@@ -10,9 +10,12 @@
   <body>
     <div class="wrapper">
       <header class="page-header">
-        <nav class="main-nav">
-          <div class="main-nav__wrapper"><a class="main-nav__logo" href="">
-              <div class="logo"><img class="logo__image" src="http://placehold.it/86x35" alt="Мишка" width="86" height="35"/></div></a>
+        <nav class="main-nav main-nav--closed">
+          <div class="main-nav__wrapper"><a class="main-nav__logo" href="index.html">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="assets/images/icons/logo-desktop.svg"/>
+                <source media="(min-width: 768px)" srcset="assets/images/icons/logo-tablet.svg"/><img class="logo__image" src="assets/images/icons/logo-mobile.svg" alt="Мишка"/>
+              </picture></a>
             <button class="main-nav__toggle" type="button" title="Открыть/закрыть меню"><span class="visually-hidden">Открыть/закрыть меню</span></button>
             <ul class="main-nav__list site-list">
               <li class="site-list__item"><a class="site-list__link" href="catalog.html">Каталог товаров</a></li>
@@ -21,8 +24,14 @@
               <li class="site-list__item site-list__item--sale"><a class="site-list__link" href="sale.html">Распродажа</a></li>
             </ul>
             <ul class="main-nav__list user-list">
-              <li class="user-list__item user-list__item--search"><a class="user-list__link user-list__link--search" href="#">Поиск по сайту</a></li>
-              <li class="user-list__item user-list__item--basket"><a class="user-list__link user-list__link--basket" href="login.html">Корзина: пока пуста</a></li>
+              <li class="user-list__item user-list__item--search"><a class="user-list__link" href="#">Поиск по сайту
+                  <svg class="user-list__icon-search" width="18" height="19">
+                    <use xlink:href="assets/images/icons/sprite.svg#icon-search"></use>
+                  </svg></a></li>
+              <li class="user-list__item user-list__item--basket"><a class="user-list__link" href="login.html">Корзина: пока пуста
+                  <svg class="user-list__icon-cart" width="21" height="18">
+                    <use xlink:href="assets/images/icons/sprite.svg#icon-cart"></use>
+                  </svg></a></li>
               <li class="user-list__item user-list__item--delivery"><a class="user-list__link user-list__link--delivery" href="#">Бесплатная доставка по России</a></li>
             </ul>
           </div>
@@ -31,7 +40,7 @@
       <main class="page-main">
         <section class="order">
           <header class="order__header">
-            <h2 class="content-title">Вязание на заказ</h2>
+            <h2 class="content-title content-title--form">Вязание на заказ</h2>
           </header>
           <div class="order__form">
             <form class="form" action="#" method="post">
@@ -61,32 +70,56 @@
                   <div class="form__inner form__inner--columns">
                     <label class="form__field">
                       <input class="form__check-elem visually-hidden" type="checkbox" id="check-1" name="form-check" checked="checked"/>
-                      <div class="form__check-fake"></div>
+                      <div class="form__check-fake">
+                        <svg class="form__check-icon" width="22" height="16">
+                          <use xlink:href="assets/images/icons/sprite.svg#icon-tick"></use>
+                        </svg>
+                      </div>
                       <div class="form__value">Белый</div>
                     </label>
                     <label class="form__field">
                       <input class="form__check-elem visually-hidden" type="checkbox" id="check-2" name="form-check" checked="checked"/>
-                      <div class="form__check-fake"></div>
+                      <div class="form__check-fake">
+                        <svg class="form__check-icon" width="22" height="16">
+                          <use xlink:href="assets/images/icons/sprite.svg#icon-tick">              </use>
+                        </svg>
+                      </div>
                       <div class="form__value">Серый</div>
                     </label>
                     <label class="form__field">
                       <input class="form__check-elem visually-hidden" type="checkbox" id="check-3" name="form-check"/>
-                      <div class="form__check-fake"></div>
+                      <div class="form__check-fake">
+                        <svg class="form__check-icon" width="22" height="16">
+                          <use xlink:href="assets/images/icons/sprite.svg#icon-tick"></use>
+                        </svg>
+                      </div>
                       <div class="form__value">«Тиффани»</div>
                     </label>
                     <label class="form__field">
                       <input class="form__check-elem visually-hidden" type="checkbox" id="check-4" name="form-check"/>
-                      <div class="form__check-fake"></div>
+                      <div class="form__check-fake">
+                        <svg class="form__check-icon" width="22" height="16">
+                          <use xlink:href="assets/images/icons/sprite.svg#icon-tick"></use>
+                        </svg>
+                      </div>
                       <div class="form__value">Черный</div>
                     </label>
                     <label class="form__field">
                       <input class="form__check-elem visually-hidden" type="checkbox" id="check-5" name="form-check"/>
-                      <div class="form__check-fake"></div>
+                      <div class="form__check-fake">
+                        <svg class="form__check-icon" width="22" height="16">
+                          <use xlink:href="assets/images/icons/sprite.svg#icon-tick"></use>
+                        </svg>
+                      </div>
                       <div class="form__value">Розовый</div>
                     </label>
                     <label class="form__field">
                       <input class="form__check-elem visually-hidden" type="checkbox" id="check-6" name="form-check"/>
-                      <div class="form__check-fake"></div>
+                      <div class="form__check-fake">
+                        <svg class="form__check-icon" width="22" height="16">
+                          <use xlink:href="assets/images/icons/sprite.svg#icon-tick"></use>
+                        </svg>
+                      </div>
                       <div class="form__value">Оранжевый</div>
                     </label>
                   </div>
@@ -117,14 +150,20 @@
                   <div class="form__inner">
                     <div class="form__field">
                       <input class="form__input" type="tel" name="form-phone" placeholder="+7 ХХХ ХХ ХХ*"/>
+                      <svg class="form__input-icon" width="25" height="24">
+                        <use xlink:href="assets/images/icons/sprite.svg#icon-phone"></use>
+                      </svg>
                     </div>
                   </div>
                 </div>
                 <div class="form__section">
-                  <h3 class="form__type">e-mail</h3>
+                  <h3 class="form__type form__type_margin_bottom">e-mail</h3>
                   <div class="form__inner">
                     <div class="form__field">
                       <input class="form__input" type="email" name="form-email" placeholder="Ваш Email*"/>
+                      <svg class="form__input-icon" width="32" height="21">
+                        <use xlink:href="assets/images/icons/sprite.svg#icon-mail"></use>
+                      </svg>
                     </div>
                   </div>
                 </div>
@@ -149,15 +188,29 @@
       </main>
       <footer class="page-footer">
         <div class="page-footer__wrapper"><a class="page-footer__logo">
-            <div class="logo" href="index.html"><img class="logo__image" src="#" alt="Мишка" width="86" height="35"/></div></a>
+            <svg class="page-footer__logo-image" width="102" height="33">
+              <use xlink:href="assets/images/icons/sprite.svg#icon-logo-footer"></use>
+            </svg></a>
           <div class="page-footer__social social">
             <ul class="social__list">
-              <li class="social__item"><a class="social__link social-link--instagram" href="#"></a></li>
-              <li class="social__item"><a class="social__link social-link--facebook" href="#"></a></li>
-              <li class="social__item"><a class="social__link social-link--twitter" href="#"></a></li>
+              <li class="social__item"><a class="social__link social-link--instagram" href="#">
+                  <svg class="social__icon social__icon--instagram" width="22" height="21">
+                    <use xlink:href="assets/images/icons/sprite.svg#icon-insta"></use>
+                  </svg></a></li>
+              <li class="social__item"><a class="social__link social-link--facebook" href="#">
+                  <svg class="social__icon social__icon--facebook" width="15" height="29">
+                    <use xlink:href="assets/images/icons/sprite.svg#icon-fb"></use>
+                  </svg></a></li>
+              <li class="social__item"><a class="social__link social-link--twitter" href="#">
+                  <svg class="social__icon social__icon--twitter" width="24" height="20">
+                    <use xlink:href="assets/images/icons/sprite.svg#icon-twitter"> </use>
+                  </svg></a></li>
             </ul>
           </div>
-          <div class="page-footer__copyright copyright"><b class="copyright__text">Разработано</b><a class="copyright__icon" href="https://htmlacademy.ru"><img class="copyright__icon-image" src="assets/images/icons/copyright.svg" alt="Разработано HTML Academy"/></a></div>
+          <div class="page-footer__copyright copyright"><b class="copyright__text">Разработано</b><a class="copyright__link" href="https://htmlacademy.ru">
+              <svg class="copyright__icon" width="27" height="34">
+                <use xlink:href="assets/images/icons/sprite.svg#icon-logo-htmlacademy"></use>
+              </svg></a></div>
         </div>
       </footer>
     </div>

@@ -4,12 +4,15 @@
 }
 
 .order__header {
+  position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 177px;
 
   background: $color-lightgray;
+  border-top: 1px solid #dfdfdf;
 }
 
 .order__form {
@@ -26,6 +29,7 @@
   margin-bottom: 20px;
 
   font-size: 13px;
+  line-height: 1.84;
 }
 
 @media (min-width: $tablet-width) {
@@ -35,13 +39,27 @@
 
   .order__header {
     min-height: 225px;
-    margin-top: -55px;
+    margin-top: -59px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -12px;
+
+      width: 100%;
+      height: 24px;
+
+      background-image: url(../images/icons/bg-zigzag-fill.svg);
+      background-repeat: repeat-x;
+      background-position: center;
+      background-size: 768px 24px;
+    }
   }
 
   .order__form {
     width: auto;
     margin: 0;
-    padding-top: 80px;
+    padding-top: 71px;
     padding-right: 0;
     padding-left: 0;
   }
@@ -60,6 +78,22 @@
 }
 
 @media (min-width: $desktop-width) {
+  .order__header {
+    min-height: 255px;
+
+    &::after {
+      bottom: -17px;
+
+      height: 34px;
+
+      background-size: 1200px 34px;
+    }
+  }
+
+  .order__form {
+    padding-top: 120px;
+  }
+
   .order__promo {
     width: 1050px;
   }

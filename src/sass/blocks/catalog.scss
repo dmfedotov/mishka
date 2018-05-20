@@ -5,6 +5,7 @@
   min-height: 177px;
 
   background: $color-lightgray;
+  border-top: 1px solid #ececec;
 }
 
 .catalog__item {
@@ -20,24 +21,32 @@
 }
 
 .catalog__desc {
-  padding: 30px;
-  padding-bottom: 5px;
+  padding-right: 26px;
+  padding-bottom: 8px;
+  padding-left: 26px;
 }
 
 .catalog__title {
+  padding-top: 27px;
+  padding-bottom: 7px;
+
   font-weight: 600;
   font-size: 17px;
+  line-height: 1.41;
   color: $color-black;
 }
 
 .catalog__info {
-  margin-bottom: 26px;
+  margin-top: 0;
+  margin-bottom: 18px;
 
   font-size: 13px;
+  line-height: 2.3;
 }
 
 .catalog__price {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   min-height: 67px;
   margin-top: auto;
@@ -51,9 +60,33 @@
   color: $color-black;
 }
 
+.catalog__icon {
+  fill: #cccccc;
+}
+
 @media (min-width: $tablet-width) {
   .catalog__header {
-    margin-bottom: 80px;
+    position: relative;
+
+    min-height: 226px;
+    margin-top: -60px;
+    margin-bottom: 79px;
+
+    border-top-color: #dfdfdf;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -12px;
+
+      width: 100%;
+      height: 24px;
+
+      background-image: url(../images/icons/bg-zigzag-fill.svg);
+      background-repeat: repeat-x;
+      background-position: center;
+      background-size: 768px 24px;
+    }
   }
 
   .catalog__wrapper {
@@ -75,14 +108,42 @@
     display: flex;
     flex-direction: column;
     width: 50%;
+    padding-right: 31px;
+  }
+
+  .catalog__title {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .catalog__info {
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  .catalog__price {
+    padding-left: 6px;
+  }
+
+  .catalog__price-value {
+    font-size: 17px;
+    line-height: 1.41;
   }
 }
 
 @media (min-width: $desktop-width) {
   .catalog__header {
-    min-height: 225px;
-    margin-top: -55px;
-    margin-bottom: 130px;
+    min-height: 255px;
+    margin-top: -61px;
+    margin-bottom: 127px;
+
+    &::after {
+      bottom: -17px;
+
+      height: 34px;
+
+      background-size: 1200px 34px;
+    }
   }
 
   .catalog__wrapper {
@@ -105,16 +166,28 @@
     }
   }
 
+  .catalog__picture-image {
+    height: 463px;
+  }
+
   .catalog__desc {
     flex-grow: 1;
     width: 100%;
-    padding-top: 26px;
-    padding-right: 27px;
-    padding-left: 27px;
+    padding-right: 31px;
+  }
+
+  .catalog__title {
+    padding-bottom: 5px;
   }
 
   .catalog__info {
+    margin-bottom: 13px;
+
     font-size: 15px;
     line-height: 2;
+  }
+
+  .catalog__price {
+    padding-left: 0;
   }
 }

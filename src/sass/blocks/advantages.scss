@@ -1,5 +1,5 @@
 .advantages {
-  margin-bottom: 55px;
+  margin-bottom: 49px;
 }
 
 .advantages__wrapper {
@@ -11,8 +11,8 @@
 }
 
 .advantages__title {
-  margin-bottom: 28px;
-  padding-top: 32px;
+  margin-bottom: 2px;
+  padding-top: 23px;
 
   font-weight: 600;
   font-size: 25px;
@@ -27,24 +27,52 @@
 .advantages__item {
   position: relative;
 
-  padding-top: 80px;
+  padding-top: 83px;
+
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 1.2;
+  color: $color-black;
 }
 
 .advantages__icon {
   position: absolute;
-  top: 20px;
-  left: 10px;
+
+  fill: #63d1bb;
 }
 
-.advantages__text {
-  font-weight: 600;
-  font-size: 17px;
-  color: $color-black;
+.advantages__icon--friendly {
+  top: 27px;
+  left: 8px;
+}
+.advantages__icon--scandinavian-style {
+  top: 29px;
+  left: 0;
+}
+
+.advantages__icon--popularity-increase {
+  top: 33px;
+  left: 7px;
+}
+
+.advantages__icon--hand-made {
+  top: 31px;
+  left: 3px;
+}
+
+.advantages__icon--domestic-support {
+  top: 32px;
+  left: -6px;
+}
+
+.advantages__icon--gift-delivery {
+  top: 30px;
+  left: 3px;
 }
 
 @media (min-width: $tablet-width) {
   .advantages {
-    margin-bottom: 76px;
+    margin-bottom: 55px;
   }
 
   .advantages__wrapper {
@@ -54,6 +82,9 @@
   }
 
   .advantages__title {
+    margin-bottom: 20px;
+    padding-top: 18px;
+
     font-size: 43px;
     line-height: 50px;
   }
@@ -66,7 +97,11 @@
 
   .advantages__item {
     width: 50%;
-    margin-bottom: 28px;
+    margin-bottom: 26px;
+    padding-top: 81px;
+
+    font-size: 22px;
+    line-height: 1.1;
   }
 
   .advantages__item--hand-made {
@@ -99,16 +134,27 @@
   .advantages__wrapper {
     box-sizing: border-box;
     width: 1050px;
-    margin-bottom: 85px;
+    margin-bottom: 67px;
     padding: 0;
   }
 
   .advantages__title {
     margin-left: 175px;
-    padding-top: 60px;
+    padding-top: 0;
+
+    font-weight: 600;
+    font-size: 53px;
+    line-height: 1.07;
   }
 
   .advantages__list {
     margin-left: 175px;
+  }
+
+  .advantages__item {
+    width: 40%;
+    margin-bottom: 27px;
+
+    font-size: 20px;
   }
 }

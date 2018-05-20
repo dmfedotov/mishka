@@ -1,17 +1,24 @@
 footer.page-footer
   .page-footer__wrapper
     a.page-footer__logo
-      .logo(href="index.html")
-        img.logo__image(src="#", alt="Мишка" width="86" height="35")
+      svg.page-footer__logo-image(width="102" height="33")
+        use(xlink:href="assets/images/icons/sprite.svg#icon-logo-footer")
     .page-footer__social.social
       ul.social__list
         li.social__item
           a.social__link.social-link--instagram(href="#")
+            svg.social__icon.social__icon--instagram(width="22" height="21")
+              use(xlink:href="assets/images/icons/sprite.svg#icon-insta")
         li.social__item
           a.social__link.social-link--facebook(href="#")
+            svg.social__icon.social__icon--facebook(width="15" height="29")
+              use(xlink:href="assets/images/icons/sprite.svg#icon-fb")
         li.social__item
           a.social__link.social-link--twitter(href="#")
+            svg.social__icon.social__icon--twitter(width="24" height="20")
+              use(xlink:href="assets/images/icons/sprite.svg#icon-twitter") 
     .page-footer__copyright.copyright
       b.copyright__text Разработано
-      a.copyright__icon(href="https://htmlacademy.ru")
-        img.copyright__icon-image(src="assets/images/icons/copyright.svg", alt="Разработано HTML Academy")
+      a.copyright__link(href="https://htmlacademy.ru")
+       svg.copyright__icon(width="27" height="34")
+        use(xlink:href="assets/images/icons/sprite.svg#icon-logo-htmlacademy")

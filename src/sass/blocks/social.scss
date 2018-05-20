@@ -1,0 +1,25 @@
+.social__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  min-height: 80px;
+  margin: 0 auto;
+
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.social__item {
+  padding: 20px;
+}
+
+.social__icon {
+  fill: $color-black;
+}
+
+@media (min-width: $tablet-width) {
+  .social__list {
+    border-bottom: none;
+  }
+}
