@@ -37,13 +37,42 @@
 
 .advantages__icon {
   position: absolute;
-  top: 20px;
-  left: 10px;
+
+  fill: #63d1bb;
+}
+
+.advantages__icon--friendly {
+  top: 27px;
+  left: 8px;
+}
+.advantages__icon--scandinavian-style {
+  top: 29px;
+  left: 0;
+}
+
+.advantages__icon--popularity-increase {
+  top: 33px;
+  left: 7px;
+}
+
+.advantages__icon--hand-made {
+  top: 31px;
+  left: 3px;
+}
+
+.advantages__icon--domestic-support {
+  top: 32px;
+  left: -6px;
+}
+
+.advantages__icon--gift-delivery {
+  top: 30px;
+  left: 3px;
 }
 
 @media (min-width: $tablet-width) {
   .advantages {
-    margin-bottom: 76px;
+    margin-bottom: 55px;
   }
 
   .advantages__wrapper {
@@ -54,7 +83,7 @@
 
   .advantages__title {
     margin-bottom: 20px;
-    padding-top: 16px;
+    padding-top: 18px;
 
     font-size: 43px;
     line-height: 50px;
@@ -68,7 +97,8 @@
 
   .advantages__item {
     width: 50%;
-    margin-bottom: 21px;
+    margin-bottom: 26px;
+    padding-top: 81px;
 
     font-size: 22px;
     line-height: 1.1;
@@ -104,7 +134,7 @@
   .advantages__wrapper {
     box-sizing: border-box;
     width: 1050px;
-    margin-bottom: 85px;
+    margin-bottom: 67px;
     padding: 0;
   }
 

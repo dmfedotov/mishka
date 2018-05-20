@@ -18,9 +18,7 @@
 
 // Временно для высоты социалок
 .page-footer__social {
-  height: 80px;
-
-  border-bottom: 1px solid #e5e5e5;
+  width: 100%;
 }
 
 .page-footer__copyright {
@@ -39,6 +37,7 @@
     justify-content: space-between;
     align-items: center;
     width: 668px;
+    min-height: 143px;
     padding-right: 50px;
     padding-left: 50px;
   }

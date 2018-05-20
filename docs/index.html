@@ -12,7 +12,10 @@
       <header class="page-header">
         <nav class="main-nav main-nav--closed">
           <div class="main-nav__wrapper"><a class="main-nav__logo" href="index.html">
-              <div class="logo"><img class="logo__image" src="http://placehold.it/86x35" alt="Мишка" width="86" height="35"/></div></a>
+              <picture>
+                <source media="(min-width: 1200px)" srcset="assets/images/icons/logo-desktop.svg"/>
+                <source media="(min-width: 768px)" srcset="assets/images/icons/logo-tablet.svg"/><img class="logo__image" src="assets/images/icons/logo-mobile.svg" alt="Мишка"/>
+              </picture></a>
             <button class="main-nav__toggle" type="button" title="Открыть/закрыть меню"><span class="visually-hidden">Открыть/закрыть меню</span></button>
             <ul class="main-nav__list site-list">
               <li class="site-list__item"><a class="site-list__link" href="catalog.html">Каталог товаров</a></li>
@@ -21,8 +24,14 @@
               <li class="site-list__item site-list__item--sale"><a class="site-list__link" href="sale.html">Распродажа</a></li>
             </ul>
             <ul class="main-nav__list user-list">
-              <li class="user-list__item user-list__item--search"><a class="user-list__link user-list__link--search" href="#">Поиск по сайту</a></li>
-              <li class="user-list__item user-list__item--basket"><a class="user-list__link user-list__link--basket" href="login.html">Корзина: пока пуста</a></li>
+              <li class="user-list__item user-list__item--search"><a class="user-list__link" href="#">Поиск по сайту
+                  <svg class="user-list__icon-search" width="18" height="19">
+                    <use xlink:href="assets/images/icons/sprite.svg#icon-search"></use>
+                  </svg></a></li>
+              <li class="user-list__item user-list__item--basket"><a class="user-list__link" href="login.html">Корзина: пока пуста
+                  <svg class="user-list__icon-cart" width="21" height="18">
+                    <use xlink:href="assets/images/icons/sprite.svg#icon-cart"></use>
+                  </svg></a></li>
               <li class="user-list__item user-list__item--delivery"><a class="user-list__link user-list__link--delivery" href="#">Бесплатная доставка по России</a></li>
             </ul>
           </div>
@@ -35,9 +44,13 @@
           </header>
           <ul class="goods__list">
             <li class="goods__item"><a class="goods__link" href="#"><span class="goods__name">Предметы интерьера</span>
-                <div class="goods__picture"><img src="http://placehold.it/41x62" alt="Предметы интерьера"/></div></a></li>
+                <svg class="goods__icon goods__icon--interior">
+                  <use xlink:href="assets/images/icons/sprite.svg#icon-interior"></use>
+                </svg></a></li>
             <li class="goods__item"><a class="goods__link goods__link--bg--dark" href="#"><span class="goods__name">Детские игрушки</span>
-                <div class="goods__picture"><img src="http://placehold.it/61x61" alt="Детские игрушки"/></div></a></li>
+                <svg class="goods__icon goods__icon--toy">
+                  <use xlink:href="assets/images/icons/sprite.svg#icon-toy"></use>
+                </svg></a></li>
           </ul>
         </section>
         <article class="offer">
@@ -61,7 +74,10 @@
                 </tr>
               </table>
             </section>
-            <div class="offer__picture"><img class="offer__picture-image" src="http://placehold.it/260x315" alt="Вязанные корзинки: товар недели"/></div>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="assets/images/content/triple-set-desktop@1x.jpg 1x, assets/images/content/triple-set-desktop@2x.jpg 2x"/>
+              <source media="(min-width: 768px)" srcset="assets/images/content/triple-set-tablet@1x.jpg 1x, assets/images/content/triple-set-tablet@2x.jpg 2x"/><img class="offer__picture" src="assets/images/content/triple-set-mobile@1x.jpg" srcset="assets/images/content/triple-set-mobile@2x.jpg 2x" alt="Вязанные корзинки: товар недели"/>
+            </picture>
             <div class="offer__buy"><b class="offer__price">Цена: 990 руб.</b><a class="offer__button button" href="form.html">Заказать</a></div>
           </div>
         </article>
@@ -69,12 +85,36 @@
           <div class="advantages__wrapper">
             <h2 class="advantages__title">Коротко о нас:</h2>
             <ul class="advantages__list">
-              <li class="advantages__item advantages__item--friendly">Экологически чистые материалы<img class="advantages__icon" src="http://placehold.it/33x15" alt=""/></li>
-              <li class="advantages__item advantages__item--scandinavian-style">Скандинавский стиль по российской цене<img class="advantages__icon" src="http://placehold.it/47x27" alt=""/></li>
-              <li class="advantages__item advantages__item--popularity-increase">Увеличивает лайки на фотографиях<img class="advantages__icon" src="http://placehold.it/34x27" alt=""/></li>
-              <li class="advantages__item advantages__item--hand-made">Связано вручную с любовью и умилением<img class="advantages__icon" src="http://placehold.it/35x34" alt=""/></li>
-              <li class="advantages__item advantages__item--domestic-support">Поддержка отечественного производителя<img class="advantages__icon" src="http://placehold.it/55x23" alt=""/></li>
-              <li class="advantages__item advantages__item--gift-delivery">Поставляется в подарочной упаковке<img class="advantages__icon" src="http://placehold.it/33x32" alt=""/></li>
+              <li class="advantages__item advantages__item--friendly">Экологически чистые материалы
+                <svg class="advantages__icon advantages__icon--friendly" width="33" height="38">
+                  <use xlink:href="assets/images/icons/sprite.svg#icon-feature-flower"></use>
+                </svg>
+              </li>
+              <li class="advantages__item advantages__item--scandinavian-style">Скандинавский стиль по российской цене
+                <svg class="advantages__icon advantages__icon--scandinavian-style" width="47" height="27">
+                  <use xlink:href="assets/images/icons/sprite.svg#icon-feature-money"></use>
+                </svg>
+              </li>
+              <li class="advantages__item advantages__item--popularity-increase">Увеличивает лайки на фотографиях
+                <svg class="advantages__icon advantages__icon--popularity-increase" width="34" height="27">
+                  <use xlink:href="assets/images/icons/sprite.svg#icon-feature-heart">     </use>
+                </svg>
+              </li>
+              <li class="advantages__item advantages__item--hand-made">Связано вручную с любовью и умилением
+                <svg class="advantages__icon advantages__icon--hand-made" width="35" height="34">
+                  <use xlink:href="assets/images/icons/sprite.svg#icon-feature-ball">         </use>
+                </svg>
+              </li>
+              <li class="advantages__item advantages__item--domestic-support">Поддержка отечественного производителя
+                <svg class="advantages__icon advantages__icon--domestic-support" width="55" height="23">
+                  <use xlink:href="assets/images/icons/sprite.svg#icon-feature-rocket"></use>
+                </svg>
+              </li>
+              <li class="advantages__item advantages__item--gift-delivery">Поставляется в подарочной упаковке
+                <svg class="advantages__icon advantages__icon--gift-delivery" width="33" height="32">
+                  <use xlink:href="assets/images/icons/sprite.svg#icon-feature-gift"></use>
+                </svg>
+              </li>
             </ul>
           </div>
         </section>
@@ -111,15 +151,29 @@
       </main>
       <footer class="page-footer">
         <div class="page-footer__wrapper"><a class="page-footer__logo">
-            <div class="logo" href="index.html"><img class="logo__image" src="#" alt="Мишка" width="86" height="35"/></div></a>
+            <svg class="page-footer__logo-image" width="102" height="33">
+              <use xlink:href="assets/images/icons/sprite.svg#icon-logo-footer"></use>
+            </svg></a>
           <div class="page-footer__social social">
             <ul class="social__list">
-              <li class="social__item"><a class="social__link social-link--instagram" href="#"></a></li>
-              <li class="social__item"><a class="social__link social-link--facebook" href="#"></a></li>
-              <li class="social__item"><a class="social__link social-link--twitter" href="#"></a></li>
+              <li class="social__item"><a class="social__link social-link--instagram" href="#">
+                  <svg class="social__icon social__icon--instagram" width="22" height="21">
+                    <use xlink:href="assets/images/icons/sprite.svg#icon-insta"></use>
+                  </svg></a></li>
+              <li class="social__item"><a class="social__link social-link--facebook" href="#">
+                  <svg class="social__icon social__icon--facebook" width="15" height="29">
+                    <use xlink:href="assets/images/icons/sprite.svg#icon-fb"></use>
+                  </svg></a></li>
+              <li class="social__item"><a class="social__link social-link--twitter" href="#">
+                  <svg class="social__icon social__icon--twitter" width="24" height="20">
+                    <use xlink:href="assets/images/icons/sprite.svg#icon-twitter"> </use>
+                  </svg></a></li>
             </ul>
           </div>
-          <div class="page-footer__copyright copyright"><b class="copyright__text">Разработано</b><a class="copyright__icon" href="https://htmlacademy.ru"><img class="copyright__icon-image" src="assets/images/icons/copyright.svg" alt="Разработано HTML Academy"/></a></div>
+          <div class="page-footer__copyright copyright"><b class="copyright__text">Разработано</b><a class="copyright__link" href="https://htmlacademy.ru">
+              <svg class="copyright__icon" width="27" height="34">
+                <use xlink:href="assets/images/icons/sprite.svg#icon-logo-htmlacademy"></use>
+              </svg></a></div>
         </div>
       </footer>
     </div>

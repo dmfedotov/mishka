@@ -1,5 +1,12 @@
 .reviews {
-  margin-bottom: 89px;
+  width: 320px;
+  margin: 0 auto;
+  padding-bottom: 51px;
+
+  background-image: url("../images/icons/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-position: center bottom;
+  background-size: 320px 7px;
 }
 
 .reviews__wrapper {
@@ -61,21 +68,44 @@
 }
 
 .reviews__toggle {
+  position: relative;
+
   width: 50%;
 
   font-size: 0;
   text-decoration: none;
 
   border: 1px solid #ececec;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+  }
 }
 
-.reviews__button {
-  margin-bottom: 50px;
+.reviews__toggle--prev::after {
+  background-image: url("../images/icons/icon-left-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.reviews__toggle--next::after {
+  background-image: url("../images/icons/icon-right-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 @media (min-width: $tablet-width) {
   .reviews {
+    width: 768px;
     margin-bottom: 60px;
+
+    background-size: 768px 18px;
   }
 
   .reviews__wrapper {
@@ -84,13 +114,24 @@
     justify-content: space-between;
     align-items: flex-start;
     width: 668px;
-    padding-top: 66px;
+    padding-top: 79px;
     padding-right: 50px;
-    padding-bottom: 85px;
+    padding-bottom: 33px;
     padding-left: 50px;
+
+    background-image: url("../images/content/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../images/content/review@2x.jpg");
+      background-size: 350px auto;
+    }
   }
 
   .reviews__title {
+    margin-bottom: 47px;
+
     font-size: 43px;
     line-height: 50px;
   }
@@ -115,7 +156,7 @@
   }
 
   .reviews__text {
-    margin-bottom: 55px;
+    margin-bottom: 59px;
 
     font-size: 17px;
     line-height: 30px;
@@ -138,6 +179,10 @@
     margin-bottom: 50px;
   }
 
+  .reviews__toggle {
+    border: none;
+  }
+
   .reviews__list {
     width: 668px;
   }
@@ -145,15 +190,19 @@
 
 @media (min-width: $desktop-width) {
   .reviews {
+    width: 1050px;
     margin-bottom: 70px;
+    padding-bottom: 45px;
+
+    background-size: 1050px 23px;
   }
 
   .reviews__wrapper {
     box-sizing: border-box;
     width: 1050px;
-    padding-top: 48px;
+    padding-top: 70px;
     padding-right: 0;
-    padding-bottom: 90px;
+    padding-bottom: 44px;
     padding-left: 175px;
   }
 

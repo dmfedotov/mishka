@@ -8,12 +8,12 @@
   text-align: center;
   color: $color-black;
 
-  &_form {
+  &--form {
     margin-top: -5px;
   }
 
-  &_catalog {
-    margin-top: -8px;
+  &--catalog {
+    margin-top: -7px;
   }
 }
 
@@ -25,12 +25,12 @@
     font-size: 43px;
     line-height: 50px;
 
-    &_form {
+    &--form {
       margin-top: 12px;
     }
 
-    &_catalog {
-      margin-top: -60px;
+    &--catalog {
+      margin-top: 15px;
     }
   }
 }
@@ -43,12 +43,12 @@
     font-size: 53px;
     line-height: 57px;
 
-    &_form {
-      margin-top: 18px;
+    &--form {
+      margin-top: -12px;
     }
 
-    &_catalog {
-      margin-top: -10px;
+    &--catalog {
+      margin-top: -13px;
     }
   }
 }

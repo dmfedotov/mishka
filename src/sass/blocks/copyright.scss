@@ -4,8 +4,12 @@
   color: $color-black;
 }
 
-.copyright__icon {
+.copyright__link {
   font-size: 0;
+}
+
+.copyright__icon {
+  fill: #63d1bb;
 }
 
 @media (min-width: $tablet-width) {

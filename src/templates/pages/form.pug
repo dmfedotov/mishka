@@ -8,7 +8,7 @@ block content
 
     section.order
       header.order__header
-        h2.content-title.content-title_form Вязание на заказ
+        h2.content-title.content-title--form Вязание на заказ
       .order__form
         form.form(action="#" method="post")
           .order__promo
@@ -32,26 +32,38 @@ block content
                 label.form__field
                   input.form__check-elem.visually-hidden(type="checkbox", id="check-1" name="form-check" checked)
                   .form__check-fake
+                    svg.form__check-icon(width="22" height="16")
+                      use(xlink:href="assets/images/icons/sprite.svg#icon-tick")
                   .form__value Белый
                 label.form__field
                   input.form__check-elem.visually-hidden(type="checkbox", id="check-2" name="form-check" checked)
                   .form__check-fake
+                    svg.form__check-icon(width="22" height="16")
+                      use(xlink:href="assets/images/icons/sprite.svg#icon-tick")               
                   .form__value Серый
                 label.form__field
                   input.form__check-elem.visually-hidden(type="checkbox", id="check-3" name="form-check")
                   .form__check-fake
+                    svg.form__check-icon(width="22" height="16")
+                      use(xlink:href="assets/images/icons/sprite.svg#icon-tick")
                   .form__value «Тиффани»
                 label.form__field
                   input.form__check-elem.visually-hidden(type="checkbox", id="check-4" name="form-check")
                   .form__check-fake
+                    svg.form__check-icon(width="22" height="16")
+                      use(xlink:href="assets/images/icons/sprite.svg#icon-tick")
                   .form__value Черный
                 label.form__field
                   input.form__check-elem.visually-hidden(type="checkbox", id="check-5" name="form-check")
                   .form__check-fake
+                    svg.form__check-icon(width="22" height="16")
+                      use(xlink:href="assets/images/icons/sprite.svg#icon-tick")
                   .form__value Розовый
                 label.form__field
                   input.form__check-elem.visually-hidden(type="checkbox", id="check-6" name="form-check")
                   .form__check-fake
+                    svg.form__check-icon(width="22" height="16")
+                      use(xlink:href="assets/images/icons/sprite.svg#icon-tick")
                   .form__value Оранжевый
           .form__wrapper.form__wrapper--name
             .form__section
@@ -72,11 +84,15 @@ block content
               .form__inner
                 .form__field
                   input.form__input(type="tel", name="form-phone" placeholder="+7 ХХХ ХХ ХХ*")
+                  svg.form__input-icon(width="25" height="24")
+                    use(xlink:href="assets/images/icons/sprite.svg#icon-phone")
             .form__section
               h3.form__type.form__type_margin_bottom e-mail
               .form__inner
                 .form__field
                   input.form__input(type="email", name="form-email" placeholder="Ваш Email*")
+                  svg.form__input-icon(width="32" height="21")
+                    use(xlink:href="assets/images/icons/sprite.svg#icon-mail")
           .form__wrapper.form__wrapper--comment
             .form__section
               h3.form__type доп
