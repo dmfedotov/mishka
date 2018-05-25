@@ -113,6 +113,7 @@ function watch() {
   gulp.watch(paths.templates.src, html);
   gulp.watch(paths.images.src, images);
   gulp.watch(paths.fonts.src, fonts);
+  gulp.watch(paths.scripts.src, scripts);
 }
 
 // следим за docs и релоадим браузер
