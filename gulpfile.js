@@ -11,8 +11,9 @@ const postcss      = require("gulp-postcss");
 const cheerio      = require('gulp-cheerio');
 const replace      = require('gulp-replace');
 const plumber      = require("gulp-plumber");
-const notify       = require("gulp-notify")
-const spritesmith  = require("gulp.spritesmith")
+const notify       = require("gulp-notify");
+const spritesmith  = require("gulp.spritesmith");
+const webp         = require("gulp-webp");
 
 // styles
 const sass         = require('gulp-sass');
@@ -41,6 +42,10 @@ const paths = {
   icons: {
     src: 'src/images/icons/*.svg',
     dest: 'src/images/icons/'
+  },
+  contentImages: {
+    src: 'src/images/content/*.{jpg,png}',
+    dest: 'docs/assets/images/content/'
   },
   fonts: {
     src: 'src/fonts/**/*.*',
@@ -82,6 +87,13 @@ function style() {
       suffix: '.min'
     }))
     .pipe(gulp.dest(paths.styles.dest))
+}
+
+// Формирование изображений в формате webp
+function webpImage () {
+  return gulp.src(paths.contentImages.src)
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest(paths.contentImages.dest));
 }
 
 // перенос картинок
@@ -168,7 +180,7 @@ function pngSprite() {
 // экспорт функций для доступа из терминала
 exports.clean     = clean;
 exports.style     = style;
-
+exports.webpImage = webpImage;
 exports.scripts   = scripts;
 exports.html      = html;
 exports.images    = images;
@@ -181,6 +193,6 @@ exports.pngSprite = pngSprite;
 // сборка и слежка
 gulp.task('default', gulp.series(
   clean,
-  gulp.parallel(style, html, images, fonts, scripts),
+  gulp.parallel(style, html, images, fonts, scripts, webpImage),
   gulp.parallel(watch, server)
 ));
