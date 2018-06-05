@@ -127,8 +127,7 @@
   .contacts__wrapper {
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
-    box-sizing: initial;
+    box-sizing: content-box;
     width: 350px;
     margin: 0;
     padding-right: 0;

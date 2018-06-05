@@ -9,11 +9,11 @@
   color: $color-black;
 
   &--form {
-    margin-top: -5px;
+    margin: 0 auto;
   }
 
   &--catalog {
-    margin-top: -7px;
+    margin: 0 auto;
   }
 }
 
@@ -26,14 +26,15 @@
     line-height: 50px;
 
     &--form {
-      margin-top: 12px;
+      margin: 0 auto;
     }
 
     &--catalog {
-      margin-top: 15px;
+      margin: 0 auto;
     }
   }
 }
+
 
 @media (min-width: $desktop-width) {
   .content-title {

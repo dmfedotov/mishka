@@ -20,6 +20,8 @@
 
 @media (min-width: $tablet-width) {
   .social__list {
+    justify-content: flex-start;
+
     border-bottom: none;
   }
 }

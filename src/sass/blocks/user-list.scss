@@ -22,6 +22,27 @@
   font-size: 17px;
   color: $color-black;
   text-decoration: none;
+
+  transition: color 0.2s ease;
+
+  &:hover,
+  &:focus {
+    color: rgba($color-black, 0.6);
+
+    .user-list__icon-search,
+    .user-list__icon-cart {
+      fill: $color-green;
+    }
+  }
+
+  &:active {
+    color: rgba($color-black, 0.3);
+
+    .user-list__icon-search,
+    .user-list__icon-cart {
+      fill-opacity: 0.3;
+    }
+  }
 }
 
 .user-list__icon-search,
@@ -29,6 +50,8 @@
   position: absolute;
   top: 37px;
   left: 32px;
+
+  transition: all 0.2s ease;
 
   fill: #d3d2d2;
 }

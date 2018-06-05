@@ -6,10 +6,8 @@
 .order__header {
   position: relative;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 177px;
+  padding-top: 70px;
 
   background: $color-lightgray;
   border-top: 1px solid #dfdfdf;
@@ -39,12 +37,14 @@
 
   .order__header {
     min-height: 225px;
-    margin-top: -59px;
+    margin-top: -60px;
+    padding-top: 93px;
 
     &::after {
       content: "";
       position: absolute;
       bottom: -12px;
+      left: 0;
 
       width: 100%;
       height: 24px;
@@ -80,6 +80,7 @@
 @media (min-width: $desktop-width) {
   .order__header {
     min-height: 255px;
+    padding-top: 106px;
 
     &::after {
       bottom: -17px;
