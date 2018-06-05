@@ -41,6 +41,20 @@
 
   .page-footer__logo {
     display: block;
+
+    cursor: pointer;
+  }
+
+  .page-footer__logo-image {
+    transition: all 0.2s ease;
+
+    &:hover {
+      fill: $color-green-dark-hover;
+    }
+
+    &:active {
+      fill: rgba($color-green-dark-hover, 0.3);
+    }
   }
 
   .page-footer__social {

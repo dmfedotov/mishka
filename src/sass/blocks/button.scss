@@ -12,4 +12,18 @@
 
   background: $color-white;
   border: 2px solid $color-gray;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $color-white;
+
+    background: $color-gray;
+  }
+
+  &:active {
+    color: rgba($color-white, 0.3);
+
+    background: $color-gray;
+  }
 }

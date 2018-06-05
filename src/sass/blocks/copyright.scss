@@ -9,7 +9,17 @@
 }
 
 .copyright__icon {
+  transition: all 0.2s ease;
+
   fill: #63d1bb;
+
+  &:hover {
+    fill: $color-green-dark-hover;
+  }
+
+  &:active {
+    fill: rgba($color-green-dark-hover, 0.3);
+  }
 }
 
 @media (min-width: $tablet-width) {

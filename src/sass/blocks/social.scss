@@ -10,11 +10,13 @@
   border-bottom: 1px solid #e5e5e5;
 }
 
-.social__item {
+.social__link {
   padding: 20px;
 }
 
 .social__icon {
+  transition: all 0.2s ease;
+
   fill: $color-black;
 }
 
@@ -23,5 +25,15 @@
     justify-content: flex-start;
 
     border-bottom: none;
+  }
+
+  .social__link {
+    &:hover .social__icon {
+      fill: $color-green-dark-hover;
+    }
+
+    &:active .social__icon {
+      fill: rgba($color-green-dark-hover, 0.3);
+    }
   }
 }

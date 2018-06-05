@@ -149,11 +149,19 @@
     padding-bottom: 34px;
     padding-left: 37px;
 
-    transition: margin-top 0.3s ease;
+    transition: all 0.3s ease;
 
     &:hover {
       margin-top: -5px;
     }
+  }
+
+  .goods__link--bg--light:hover {
+    background-color: #59d5bc;
+  }
+
+  .goods__link--bg--dark:hover {
+    background-color: #51c6b3;
   }
 
   .goods__icon {

@@ -38,9 +38,22 @@
 
 .contacts__value {
   margin: 0;
+}
 
-  &--underlined {
-    border-bottom: 1px solid #62d1ba;
+.contacts__link {
+  color: $color-gray;
+  text-decoration: none;
+
+  border-bottom: 1px solid #62d1ba;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $color-green-dark-hover;
+  }
+
+  &:active {
+    color: rgba($color-green-dark-hover, 0.2);
   }
 }
 
@@ -130,6 +143,7 @@
     box-sizing: content-box;
     width: 350px;
     margin: 0;
+    margin-bottom: 53px;
     padding-right: 0;
     padding-left: 175px;
 
