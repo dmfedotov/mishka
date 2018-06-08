@@ -59,6 +59,8 @@
 }
 
 .catalog__icon {
+  transition: all 0.2s ease;
+
   fill: #cccccc;
 }
 
@@ -97,6 +99,22 @@
   .catalog__item {
     display: flex;
     margin-bottom: 53px;
+
+    &:hover .catalog__desc {
+      box-shadow: 0 6px 10px 0 rgba($color-black, 0.1);
+    }
+
+    &:hover .catalog__icon {
+      fill: $color-green-dark-hover;
+    }
+
+    &:active .catalog__desc {
+      box-shadow: 0 3px 5px 0 rgba($color-black, 0.1);
+    }
+
+    &:active .catalog__icon {
+      fill: rgba($color-green-dark-hover, 0.3);
+    }
   }
 
   .catalog__picture-image {
@@ -109,6 +127,8 @@
     flex-direction: column;
     width: 50%;
     padding-right: 31px;
+
+    transition: all 0.2s ease;
   }
 
   .catalog__title {
