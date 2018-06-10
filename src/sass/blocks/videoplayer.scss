@@ -17,4 +17,15 @@
   outline: none;
   transform: translate(-50%, -50%);
   cursor: pointer;
+
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  &:active {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.3;
+  }
 }

@@ -1,7 +1,6 @@
 .goods {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   min-height: 488px;
 
   background-color: #fafafa;
@@ -43,6 +42,22 @@
   &--bg--dark {
     background: $color-green-dark;
   }
+
+  &:hover {
+    .goods__icon {
+      fill-opacity: 0.7;
+    }
+  }
+
+  &:active {
+    .goods__name {
+      color: rgba($color-white, 0.3);
+    }
+
+    .goods__icon {
+      fill-opacity: 0.3;
+    }
+  }
 }
 
 .goods__name {
@@ -52,6 +67,8 @@
   font-weight: 600;
   font-size: 19px;
   color: $color-white;
+
+  transition: all 0.2s ease;
 }
 
 .goods__icon {
@@ -60,6 +77,8 @@
 
   width: 62px;
   height: 62px;
+
+  transition: fill-opacity 0.2s ease;
 
   fill: #149080;
   fill-opacity: 0.5;
@@ -87,7 +106,9 @@
       content: "";
       position: absolute;
       bottom: -12px;
+      left: 0;
 
+      display: block;
       width: 100%;
       height: 24px;
 
@@ -110,32 +131,49 @@
 
   .goods__list {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     width: 668px;
     margin: 0 auto;
+    margin-top: auto;
   }
 
   .goods__item {
-    width: 50%;
+    display: flex;
+    flex-grow: 1;
   }
 
+
   .goods__link {
+    flex-grow: 1;
     padding-top: 29px;
     padding-bottom: 34px;
     padding-left: 37px;
-	}
-	
-	.goods__icon {
 
-		&--interior {
-			top: 30px;
-		}
+    transition: all 0.3s ease;
 
-		&--toy {
-			top: 30px;
-			right: 31px;
-		}
-	}
+    &:hover {
+      margin-top: -5px;
+    }
+  }
+
+  .goods__link--bg--light:hover {
+    background-color: #59d5bc;
+  }
+
+  .goods__link--bg--dark:hover {
+    background-color: #51c6b3;
+  }
+
+  .goods__icon {
+    &--interior {
+      top: 30px;
+    }
+
+    &--toy {
+      top: 30px;
+      right: 31px;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {

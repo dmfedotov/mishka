@@ -55,6 +55,16 @@
     display: flex;
     flex-direction: column;
     width: 668px;
+
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 6px 10px 0 rgba($color-black, 0.1);
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px 0 rgba($color-black, 0.1);
+    }
   }
 
   .production__icon {

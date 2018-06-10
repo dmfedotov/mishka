@@ -1,14 +1,30 @@
+.copyright {
+  text-decoration: none;
+
+  &:hover .copyright__icon {
+    fill: $color-green-dark-hover;
+  }
+
+  &:active .copyright__text {
+    color: rgba($color-black, 0.3);
+  }
+
+  &:active .copyright__icon {
+    fill: rgba($color-green-dark-hover, 0.3);
+  }
+}
+
 .copyright__text {
   font-weight: 600;
   font-size: 19px;
   color: $color-black;
-}
 
-.copyright__link {
-  font-size: 0;
+  transition: color 0.2s ease;
 }
 
 .copyright__icon {
+  transition: all 0.2s ease;
+
   fill: #63d1bb;
 }
 

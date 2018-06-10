@@ -109,7 +109,7 @@
   }
 
   .offer__type {
-    box-sizing: initial;
+    box-sizing: content-box;
     width: 75px;
     margin-top: 10px;
     padding-right: 28px;
@@ -197,7 +197,7 @@
   }
 
   .offer__picture {
-    margin-top: -160px;
+    margin-top: -164px;
   }
 
   .offer__buy {
