@@ -12,10 +12,10 @@ html(lang="ru")
       title Мишка
     link(rel='stylesheet' href='assets/css/style.min.css')
     script(src="assets/scripts/picturefill.min.js" async)
-    script(src="assets/scripts/svg4everybody.min.js")
-    script svg4everybody();
   body
     .wrapper
+      div(style="display: none")
+        include ../../docs/assets/images/icons/sprite.svg
       include common/header
       block content
       include common/footer
