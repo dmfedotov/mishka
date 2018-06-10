@@ -9,6 +9,7 @@
     "browser-sync": "^2.24.4",
     "del": "^3.0.0",
     "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-imagemin": "^4.1.0",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "7.0.x",
@@ -16,6 +17,7 @@
     "gulp-rename": "^1.2.3",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
+    "gulp-svgstore": "^6.1.1",
     "gulp-webp": "^3.0.0",
     "normalize.css": "^8.0.0",
     "pug": "^2.0.3",
@@ -26,8 +28,8 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint 'src/sass/**/*.scss' --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp style",
-    "start": "gulp"
+    "build": "gulp build",
+    "start": "npm run build && gulp server"
   },
   "browserslist": [
     "last 2 versions",
