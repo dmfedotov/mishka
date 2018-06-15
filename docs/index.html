@@ -83,7 +83,7 @@
               <source media="(min-width: 1200px)" srcset="assets/images/content/triple-set-desktop@1x.jpg 1x, assets/images/content/triple-set-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="assets/images/content/triple-set-tablet@1x.jpg 1x, assets/images/content/triple-set-tablet@2x.jpg 2x"><img class="offer__picture" src="assets/images/content/triple-set-mobile@1x.jpg" srcset="assets/images/content/triple-set-mobile@2x.jpg 2x" alt="Вязанные корзинки: товар недели">
             </picture>
-            <div class="offer__buy"><b class="offer__price">Цена: 990 руб.</b><a class="offer__button button" href="form.html">Заказать</a></div>
+            <div class="offer__buy"><b class="offer__price">Цена: 990 руб.</b><a class="offer__button button" href="knitted-baskets.html">Заказать</a></div>
           </div>
         </article>
         <section class="advantages">
@@ -178,6 +178,23 @@
             </svg></a>
         </div>
       </footer>
+      <div class="overlay">
+        <section class="modal">
+          <form class="modal__form" action="#" method="post">
+            <h2 class="modal__title">Добавить в корзину</h2>
+            <p class="modal__choose">Выберите размер:</p>
+            <div class="modal__size-chart">
+              <input class="modal__input visually-hidden" type="radio" id="size-S" name="size">
+              <label class="modal__label" for="size-S">S</label>
+              <input class="modal__input visually-hidden" type="radio" id="size-M" name="size">
+              <label class="modal__label" for="size-M">M</label>
+              <input class="modal__input visually-hidden" type="radio" id="size-L" name="size">
+              <label class="modal__label" for="size-L">L</label>
+            </div>
+            <button class="button modal__add button--green" type="submit">Добавить</button>
+          </form>
+        </section>
+      </div>
     </div>
     <script src="assets/scripts/main.min.js"></script>
   </body>
