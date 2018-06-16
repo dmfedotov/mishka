@@ -49,4 +49,25 @@
     e.stopPropagation(); // для предотвращения закрытия модального окна при клике по нему. Источник: https://learn.javascript.ru/event-bubbling#прекращение-всплытия
   });
 
+
+  // Интерактивная карта
+  (function () {
+    ymaps.ready(init);
+    var map;
+
+    function init () {
+      map = new ymaps.Map("map", {
+        center: [59.93864018, 30.32309218],
+        zoom: 17
+      });
+
+      map.controls
+        .remove('geolocationControl')
+        .remove('searchControl')
+        .remove('trafficControl')
+        .remove('typeSelector')
+        .remove('rulerControl');
+    }
+  })();
+
 })();
