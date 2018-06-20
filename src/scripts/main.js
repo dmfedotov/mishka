@@ -18,7 +18,6 @@
     }
   });
 
-
   // Модальное окно
   modalBtn.addEventListener("click", function (e) {
     e.preventDefault();
@@ -27,7 +26,7 @@
     overlay.classList.add("overlay--show");
   });
 
-  // Закрытие
+  // Закрытие по клику на оверлей
   overlay.addEventListener("click", function () {
     if (modal.classList.contains("modal--show")) {
       modal.classList.remove("modal--show");
@@ -38,6 +37,7 @@
     }
   });
 
+  // Закрытие по клавише ESC
   window.addEventListener("keydown", function (e) {
     if (e.keyCode === 27) {
       modal.classList.remove("modal--show");
@@ -53,13 +53,20 @@
   // Интерактивная карта
   (function () {
     ymaps.ready(init);
-    var map;
+    var map = document.querySelector(".contacts__map")
 
-    function init () {
-      map = new ymaps.Map("map", {
+    function init() {
+      map = new ymaps.Map(map, {
         center: [59.93864018, 30.32309218],
         zoom: 17
       });
+
+      map.behaviors.disable("scrollZoom") // отключаем скроллинг карты с помощью колеса мыши
+
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        // отключаем перетаскивание карты на мобильных устройствах
+        map.behaviors.disable('drag');
+      } 
 
       map.controls
         .remove('geolocationControl')
