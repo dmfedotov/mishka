@@ -130,6 +130,7 @@
     display: flex;
     flex-direction: row;
     width: 668px;
+    height: 119px;
     margin: 0 auto;
     margin-top: auto;
   }
@@ -137,6 +138,12 @@
   .goods__item {
     display: flex;
     flex-grow: 1;
+
+    transition: all 0.3s ease;
+
+    &:hover {
+      margin-top: -5px;
+    }
   }
 
 
@@ -145,12 +152,6 @@
     padding-top: 29px;
     padding-bottom: 34px;
     padding-left: 37px;
-
-    transition: all 0.3s ease;
-
-    &:hover {
-      margin-top: -5px;
-    }
   }
 
   .goods__link--bg--light:hover {
