@@ -34,7 +34,6 @@
     </nav>
     <link rel="stylesheet" href="assets/css/style.min.css">
     <script src="assets/scripts/picturefill.min.js" async></script>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -57,11 +56,10 @@
                 <div class="catalog__desc"><a class="catalog__title-link" href="bunny.html">
                     <h2 class="catalog__title">Зайчик-попрыгайчик</h2></a>
                   <p class="catalog__info">Рост 30 см, вес 200 г</p>
-                  <div class="catalog__price"><span class="catalog__price-value">1 200 руб.</span>
-                    <svg class="catalog__icon" width="21" height="19">
-                      <use xlink:href="#icon-cart"></use>
-                    </svg>
-                  </div>
+                  <div class="catalog__price"><span class="catalog__price-value">1 200 руб.</span><a class="catalog__basket btn-modal" href="basket.html" title="Положить в корзину">
+                      <svg class="catalog__icon" width="21" height="19">
+                        <use xlink:href="#icon-cart"></use>
+                      </svg></a></div>
                 </div>
               </li>
               <li class="catalog__item"><a class="catalog__picture-link" href="bowl.html">
@@ -75,11 +73,10 @@
                 <div class="catalog__desc"><a class="catalog__title-link" href="bowl.html">
                     <h2 class="catalog__title">Корзинка для белья</h2></a>
                   <p class="catalog__info">Диаметр 15 см, высота 10 см</p>
-                  <div class="catalog__price"><span class="catalog__price-value">690 руб.</span>
-                    <svg class="catalog__icon" width="21" height="19">
-                      <use xlink:href="#icon-cart"></use>
-                    </svg>
-                  </div>
+                  <div class="catalog__price"><span class="catalog__price-value">690 руб.</span><a class="catalog__basket btn-modal" href="basket.html" title="Положить в корзину">
+                      <svg class="catalog__icon" width="21" height="19">
+                        <use xlink:href="#icon-cart"></use>
+                      </svg></a></div>
                 </div>
               </li>
               <li class="catalog__item"><a class="catalog__picture-link" href="toy.html">
@@ -93,11 +90,10 @@
                 <div class="catalog__desc"><a class="catalog__title-link" href="toy.html">
                     <h2 class="catalog__title">Большая корзинка для игрушек</h2></a>
                   <p class="catalog__info">Диаметр 30 см, высота 30 см</p>
-                  <div class="catalog__price"><span class="catalog__price-value">1 500 руб.</span>
-                    <svg class="catalog__icon" width="21" height="19">
-                      <use xlink:href="#icon-cart"></use>
-                    </svg>
-                  </div>
+                  <div class="catalog__price"><span class="catalog__price-value">1 500 руб.</span><a class="catalog__basket btn-modal" href="basket.html" title="Положить в корзину">
+                      <svg class="catalog__icon" width="21" height="19">
+                        <use xlink:href="#icon-cart"></use>
+                      </svg></a></div>
                 </div>
               </li>
             </ul>
@@ -152,6 +148,23 @@
             </svg></a>
         </div>
       </footer>
+      <div class="overlay">
+        <section class="modal">
+          <form class="modal__form" action="#" method="post">
+            <h2 class="modal__title">Добавить в корзину</h2>
+            <p class="modal__choose">Выберите размер:</p>
+            <div class="modal__size-chart">
+              <input class="modal__input visually-hidden" type="radio" id="size-S" name="size">
+              <label class="modal__label" for="size-S">S</label>
+              <input class="modal__input visually-hidden" type="radio" id="size-M" name="size">
+              <label class="modal__label" for="size-M">M</label>
+              <input class="modal__input visually-hidden" type="radio" id="size-L" name="size">
+              <label class="modal__label" for="size-L">L</label>
+            </div>
+            <button class="button modal__add button--green" type="submit">Добавить</button>
+          </form>
+        </section>
+      </div>
     </div>
     <script src="assets/scripts/main.min.js"></script>
   </body>

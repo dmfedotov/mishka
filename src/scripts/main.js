@@ -3,7 +3,7 @@
   var navToggle = document.querySelector(".main-nav__toggle");
   var overlay = document.querySelector(".overlay");
   var modal = document.querySelector(".modal");
-  var modalBtn = document.querySelector(".offer__button");
+  var modalBtns = document.querySelectorAll(".btn-modal");
 
   // Мобильное меню
   navMain.classList.remove("main-nav--nojs");
@@ -19,12 +19,15 @@
   });
 
   // Модальное окно
-  modalBtn.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    modal.classList.add("modal--show");
-    overlay.classList.add("overlay--show");
+  [].forEach.call(modalBtns, function (item) {
+    item.addEventListener("click", function (e) {
+      e.preventDefault();
+  
+      modal.classList.add("modal--show");
+      overlay.classList.add("overlay--show");
+    });
   });
+  
 
   // Закрытие по клику на оверлей
   overlay.addEventListener("click", function () {
