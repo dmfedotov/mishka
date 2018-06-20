@@ -54,6 +54,8 @@
   (function () {
     ymaps.ready(init);
     var map = document.querySelector(".contacts__map")
+    var myPlacemark,
+      myPin;
 
     function init() {
       map = new ymaps.Map(map, {
@@ -66,7 +68,7 @@
       if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         // отключаем перетаскивание карты на мобильных устройствах
         map.behaviors.disable('drag');
-      } 
+      }
 
       map.controls
         .remove('geolocationControl')
@@ -74,6 +76,20 @@
         .remove('trafficControl')
         .remove('typeSelector')
         .remove('rulerControl');
+
+      myPin = new ymaps.GeoObjectCollection({}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'assets/images/icons/icon-map-pin.svg',
+        iconImageSize: [66, 101],
+        iconImageOffset: [-40, -90]
+      });
+
+      myPlacemark = new ymaps.Placemark([59.93871720, 30.32316715], {
+
+      });
+
+      myPin.add(myPlacemark);
+      map.geoObjects.add(myPin);
     }
   })();
 
