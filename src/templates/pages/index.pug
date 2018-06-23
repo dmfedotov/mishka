@@ -2,8 +2,6 @@ extends ../template
 
 block title
   title Главная страница
-block script-map
-  script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
 
   header.page-header
     nav.main-nav.main-nav--closed.main-nav--nojs
@@ -44,12 +42,12 @@ block content
         h2.content-title Милые штуки ручной работы&nbsp;для&nbsp;дома
       ul.goods__list
         li.goods__item
-          a.goods__link.goods__link--bg--light(href="#")
+          a.goods__link.goods__link--bg--light(href="interior-items.html")
             span.goods__name Предметы интерьера
             svg.goods__icon.goods__icon--interior
               use(xlink:href="#icon-interior")
         li.goods__item
-          a.goods__link.goods__link--bg--dark(href="#")
+          a.goods__link.goods__link--bg--dark(href="toys.html")
             span.goods__name Детские игрушки
             svg.goods__icon.goods__icon--toy
               use(xlink:href="#icon-toy")
@@ -176,3 +174,5 @@ block footer
           input.modal__input.visually-hidden(type="radio" id="size-L" name="size")
           label.modal__label(for="size-L") L
         button.button.modal__add.button--green(type="submit") Добавить
+block script-map
+  script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")

@@ -4,6 +4,7 @@ const gulp         = require('gulp');
 const del          = require('del');
 const browserSync  = require('browser-sync').create();
 const pug          = require('gulp-pug');
+const htmlmin      = require('gulp-htmlmin');
 const autoprefixer = require('autoprefixer');
 const svgstore     = require('gulp-svgstore');
 const postcss      = require("gulp-postcss");
@@ -63,6 +64,7 @@ gulp.task('html', function () {
     .pipe(pug({
       pretty: true
     }))
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest(paths.root))
     .pipe(browserSync.stream());
 });
