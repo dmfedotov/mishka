@@ -8,10 +8,11 @@ html(lang="ru")
       title Мишка
     link(rel='stylesheet' href='assets/css/style.min.css')
     script(src="assets/scripts/picturefill.min.js" async)
+    block script-map
   body
     .wrapper
       div(style="display: none")
         include ../../docs/assets/images/icons/sprite.svg
-      include common/header
       block content
-      include common/footer
+      block footer
+    script(src="assets/scripts/main.min.js")

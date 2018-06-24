@@ -4,14 +4,17 @@ const gulp         = require('gulp');
 const del          = require('del');
 const browserSync  = require('browser-sync').create();
 const pug          = require('gulp-pug');
+const htmlmin      = require('gulp-htmlmin');
 const autoprefixer = require('autoprefixer');
 const svgstore     = require('gulp-svgstore');
 const postcss      = require("gulp-postcss");
 const plumber      = require("gulp-plumber");
 const notify       = require("gulp-notify");
 const imagemin     = require("gulp-imagemin");
+const uglify       = require("gulp-uglify");
 const webp         = require("gulp-webp");
 const sass         = require('gulp-sass');
+const csso         = require('gulp-csso');
 const rename       = require('gulp-rename');
 const sourcemaps   = require('gulp-sourcemaps');
 
@@ -62,6 +65,7 @@ gulp.task('html', function () {
     .pipe(pug({
       pretty: true
     }))
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest(paths.root))
     .pipe(browserSync.stream());
 });
@@ -74,14 +78,11 @@ gulp.task('style', function () {
         return {title: "Style", message: err.message};
       })
     }))
-    .pipe(sourcemaps.init())
-    .pipe(sass({
-      outputStyle: 'compressed'
-    }))
+    .pipe(sass())
+    .pipe(csso())
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(sourcemaps.write())
     .pipe(rename({
       suffix: '.min'
     }))
@@ -107,6 +108,22 @@ gulp.task('webpImage', function () {
     .pipe(gulp.dest(paths.contentImages.dest));
 });
 
+// Минификация js
+gulp.task("uglify", function() {
+  return gulp.src(paths.scripts.src)
+    .pipe(plumber({
+      errorHandler: notify.onError(function (err) {
+        return {title: "Script", message: err.message};
+      })
+    }))
+    .pipe(uglify())
+    .pipe(rename({
+      suffix: ".min"
+    }))
+    .pipe(gulp.dest(paths.scripts.dest))
+    .pipe(browserSync.stream());
+});
+
 // Очистка папки build
 gulp.task('clean', function () {
   return del(paths.root);
@@ -122,6 +139,7 @@ gulp.task('server', function () {
   gulp.watch(paths.styles.src, gulp.series('style'));
   gulp.watch(paths.templates.src, gulp.series('html'));
   gulp.watch(paths.images.src, gulp.series('images'));
+  gulp.watch(paths.scripts.src, gulp.series('uglify'));
 });
 
 // Создание SVG спрайта
@@ -139,7 +157,6 @@ gulp.task('copy', function  () {
   return gulp.src([
     paths.fonts.src,
     paths.images.src,
-    paths.scripts.src
   ], {
     base: 'src'
   })
@@ -149,6 +166,7 @@ gulp.task('copy', function  () {
 // Сборка проекта
 gulp.task('build', gulp.series(
   'clean',
+  'uglify',
   'copy',
   'images',
   'webpImage',

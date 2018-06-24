@@ -3,6 +3,37 @@ extends ../template
 block title
   title Каталог товаров
 
+  header.page-header
+  nav.main-nav.main-nav--closed.main-nav--nojs
+    .main-nav__wrapper
+      a.main-nav__logo(href="index.html")
+        picture
+          source(media="(min-width: 1200px)" srcset="assets/images/icons/logo-desktop.svg")
+          source(media="(min-width: 768px)" srcset="assets/images/icons/logo-tablet.svg")
+          img.logo__image(src="assets/images/icons/logo-mobile.svg" alt="Мишка")
+      button.main-nav__toggle(type="button" title="Открыть/закрыть меню")
+        span.visually-hidden Открыть/закрыть меню
+      ul.main-nav__list.site-list
+        li.site-list__item
+          a.site-list__link(href="catalog.html") Каталог товаров
+        li.site-list__item
+          a.site-list__link(href="form.html") Вязание на заказ
+        li.site-list__item.site-list__item--new-goods
+          a.site-list__link(href="new-goods.html") Новые поступления
+        li.site-list__item.site-list__item--sale
+          a.site-list__link(href="sale.html") Распродажа
+      ul.main-nav__list.user-list
+        li.user-list__item.user-list__item--search
+          a.user-list__link(href="#") Поиск по сайту
+            svg.user-list__icon-search(width="18" height="19")
+              use(xlink:href="#icon-search")
+        li.user-list__item.user-list__item--basket
+          a.user-list__link(href="basket.html") Корзина: пока пуста
+            svg.user-list__icon-cart(width="21" height="18")
+              use(xlink:href="#icon-cart")
+        li.user-list__item.user-list__item--delivery
+          a.user-list__link.user-list__link--delivery(href="#") Бесплатная доставка по России
+
 block content
   main.page-main
 
@@ -12,68 +43,77 @@ block content
       .catalog__wrapper
         ul.catalog__list
           li.catalog__item
-            picture
-              source(type="image/webp" media="(min-width: 1200px)"
-                 srcset="assets/images/content/photo-hare-desktop@1x.webp 1x, assets/images/content/photo-hare-desktop@2x.webp 2x")
-              source(type="image/webp" media="(min-width: 768px)"
-                 srcset="assets/images/content/photo-hare-tablet@1x.webp, assets/images/content/photo-hare-tablet@2x.webp 2x")
-              source(type="image/webp"
-                 srcset="assets/images/content/photo-hare-mobile@1x.webp, assets/images/content/photo-hare-mobile@2x.webp 2x")
-
-              source(media="(min-width: 1200px)"
-                 srcset="assets/images/content/photo-hare-desktop@1x.jpg 1x, assets/images/content/photo-hare-desktop@2x.jpg 2x")
-              source(media="(min-width: 768px)"
-                 srcset="assets/images/content/photo-hare-tablet@1x.jpg 1x, assets/images/content/photo-hare-tablet@2x.jpg 2x")
-              img.catalog__picture(src="assets/images/content/photo-hare-mobile@1x.jpg", srcset="assets/images/content/photo-hare-mobile@2x.jpg 2x" alt="Зайчик попрыгайчик")
+            a.catalog__picture-link(href="bunny.html")
+              picture
+                source(type="image/webp" media="(min-width: 1200px)"
+                   srcset="assets/images/content/photo-hare-desktop@1x.webp 1x, assets/images/content/photo-hare-desktop@2x.webp 2x")
+                source(type="image/webp" media="(min-width: 768px)"
+                   srcset="assets/images/content/photo-hare-tablet@1x.webp, assets/images/content/photo-hare-tablet@2x.webp 2x")
+                source(type="image/webp"
+                   srcset="assets/images/content/photo-hare-mobile@1x.webp, assets/images/content/photo-hare-mobile@2x.webp 2x")
+  
+                source(media="(min-width: 1200px)"
+                   srcset="assets/images/content/photo-hare-desktop@1x.jpg 1x, assets/images/content/photo-hare-desktop@2x.jpg 2x")
+                source(media="(min-width: 768px)"
+                   srcset="assets/images/content/photo-hare-tablet@1x.jpg 1x, assets/images/content/photo-hare-tablet@2x.jpg 2x")
+                img.catalog__picture(src="assets/images/content/photo-hare-mobile@1x.jpg", srcset="assets/images/content/photo-hare-mobile@2x.jpg 2x" alt="Зайчик попрыгайчик")
             .catalog__desc
-              h2.catalog__title Зайчик-попрыгайчик
+              a.catalog__title-link(href="bunny.html")
+                h2.catalog__title Зайчик-попрыгайчик
               p.catalog__info Рост 30 см, вес 200 г
               .catalog__price
                 span.catalog__price-value 1 200 руб.
-                svg.catalog__icon(width="21" height="19")
-                  use(xlink:href="#icon-cart")
+                a.catalog__basket.btn-modal(href="basket.html" title="Положить в корзину")
+                  svg.catalog__icon(width="21" height="19")
+                    use(xlink:href="#icon-cart")
           li.catalog__item
-            picture
-              source(type="image/webp" media="(min-width: 1200px)"
-                 srcset="assets/images/content/photo-bowl-desktop@1x.webp 1x, assets/images/content/photo-bowl-desktop@2x.webp 2x")
-              source(type="image/webp" media="(min-width: 768px)"
-                 srcset="assets/images/content/photo-bowl-tablet@1x.webp, assets/images/content/photo-bowl-tablet@2x.webp 2x")
-              source(type="image/webp"
-                 srcset="assets/images/content/photo-bowl-mobile@1x.webp, assets/images/content/photo-bowl-mobile@2x.webp 2x")
-
-              source(media="(min-width: 1200px)"
-                 srcset="assets/images/content/photo-bowl-desktop@1x.jpg 1x, assets/images/content/photo-bowl-desktop@2x.jpg 2x")
-              source(media="(min-width: 768px)"
-                 srcset="assets/images/content/photo-bowl-tablet@1x.jpg 1x, assets/images/content/photo-bowl-tablet@2x.jpg 2x")
-              img.catalog__picture(src="assets/images/content/photo-bowl-mobile@1x.jpg", srcset="assets/images/content/photo-bowl-mobile@2x.jpg 2x" alt="Корзинка для белья")
+            a.catalog__picture-link(href="bowl.html")
+              picture
+                source(type="image/webp" media="(min-width: 1200px)"
+                   srcset="assets/images/content/photo-bowl-desktop@1x.webp 1x, assets/images/content/photo-bowl-desktop@2x.webp 2x")
+                source(type="image/webp" media="(min-width: 768px)"
+                   srcset="assets/images/content/photo-bowl-tablet@1x.webp, assets/images/content/photo-bowl-tablet@2x.webp 2x")
+                source(type="image/webp"
+                   srcset="assets/images/content/photo-bowl-mobile@1x.webp, assets/images/content/photo-bowl-mobile@2x.webp 2x")
+  
+                source(media="(min-width: 1200px)"
+                   srcset="assets/images/content/photo-bowl-desktop@1x.jpg 1x, assets/images/content/photo-bowl-desktop@2x.jpg 2x")
+                source(media="(min-width: 768px)"
+                   srcset="assets/images/content/photo-bowl-tablet@1x.jpg 1x, assets/images/content/photo-bowl-tablet@2x.jpg 2x")
+                img.catalog__picture(src="assets/images/content/photo-bowl-mobile@1x.jpg", srcset="assets/images/content/photo-bowl-mobile@2x.jpg 2x" alt="Корзинка для белья")
             .catalog__desc
-              h2.catalog__title Корзинка для белья
+              a.catalog__title-link(href="bowl.html")
+                h2.catalog__title Корзинка для белья
               p.catalog__info Диаметр 15 см, высота 10 см
               .catalog__price
                 span.catalog__price-value 690 руб.
-                svg.catalog__icon(width="21" height="19")
-                  use(xlink:href="#icon-cart")
+                a.catalog__basket.btn-modal(href="basket.html" title="Положить в корзину")
+                  svg.catalog__icon(width="21" height="19")
+                    use(xlink:href="#icon-cart")
           li.catalog__item
-            picture
-              source(type="image/webp" media="(min-width: 1200px)"
-                 srcset="assets/images/content/photo-toys-desktop@1x.webp 1x, assets/images/content/photo-toys-desktop@2x.webp 2x")
-              source(type="image/webp" media="(min-width: 768px)"
-                 srcset="assets/images/content/photo-toys-tablet@1x.webp, assets/images/content/photo-toys-tablet@2x.webp 2x")
-              source(type="image/webp"
-                 srcset="assets/images/content/photo-toys-mobile@1x.webp, assets/images/content/photo-toys-mobile@2x.webp 2x")
-
-              source(media="(min-width: 1200px)"
-                 srcset="assets/images/content/photo-toys-desktop@1x.jpg 1x, assets/images/content/photo-toys-desktop@2x.jpg 2x")
-              source(media="(min-width: 768px)"
-                 srcset="assets/images/content/photo-toys-tablet@1x.jpg 1x, assets/images/content/photo-toys-tablet@2x.jpg 2x")
-              img.catalog__picture(src="assets/images/content/photo-toys-mobile@1x.jpg", srcset="assets/images/content/photo-toys-mobile@2x.jpg 2x" alt="Большая корзинка для игрушек")
+            a.catalog__picture-link(href="toy.html")
+              picture
+                source(type="image/webp" media="(min-width: 1200px)"
+                   srcset="assets/images/content/photo-toys-desktop@1x.webp 1x, assets/images/content/photo-toys-desktop@2x.webp 2x")
+                source(type="image/webp" media="(min-width: 768px)"
+                   srcset="assets/images/content/photo-toys-tablet@1x.webp, assets/images/content/photo-toys-tablet@2x.webp 2x")
+                source(type="image/webp"
+                   srcset="assets/images/content/photo-toys-mobile@1x.webp, assets/images/content/photo-toys-mobile@2x.webp 2x")
+  
+                source(media="(min-width: 1200px)"
+                   srcset="assets/images/content/photo-toys-desktop@1x.jpg 1x, assets/images/content/photo-toys-desktop@2x.jpg 2x")
+                source(media="(min-width: 768px)"
+                   srcset="assets/images/content/photo-toys-tablet@1x.jpg 1x, assets/images/content/photo-toys-tablet@2x.jpg 2x")
+                img.catalog__picture(src="assets/images/content/photo-toys-mobile@1x.jpg", srcset="assets/images/content/photo-toys-mobile@2x.jpg 2x" alt="Большая корзинка для игрушек")
             .catalog__desc
-              h2.catalog__title Большая корзинка для игрушек
+              a.catalog__title-link(href="toy.html")
+                h2.catalog__title Большая корзинка для игрушек
               p.catalog__info Диаметр 30 см, высота 30 см
               .catalog__price
                 span.catalog__price-value 1 500 руб.
-                svg.catalog__icon(width="21" height="19")
-                  use(xlink:href="#icon-cart")
+                a.catalog__basket.btn-modal(href="basket.html" title="Положить в корзину")
+                  svg.catalog__icon(width="21" height="19")
+                    use(xlink:href="#icon-cart")
     section.production
       .production__wrapper
         h2.production__title Процесс производства
@@ -98,3 +138,42 @@ block content
         .production__content
           p.production__text По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
           a.button.button_catalog(href="form.html") Сделать заказ
+
+block footer
+  footer.page-footer
+    .page-footer__wrapper
+      a.page-footer__logo
+        svg.page-footer__logo-image(width="102" height="33")
+          use(xlink:href="#icon-logo-footer")
+      .page-footer__social.social
+        ul.social__list
+          li.social__item
+            a.social__link.social-link--instagram(href="#")
+              svg.social__icon.social__icon--instagram(width="22" height="21")
+                use(xlink:href="#icon-insta")
+          li.social__item
+            a.social__link.social-link--facebook(href="#")
+              svg.social__icon.social__icon--facebook(width="15" height="29")
+                use(xlink:href="#icon-fb")
+          li.social__item
+            a.social__link.social-link--twitter(href="#")
+              svg.social__icon.social__icon--twitter(width="24" height="20")
+                use(xlink:href="#icon-twitter") 
+      a.page-footer__copyright.copyright(href="https://htmlacademy.ru")
+        b.copyright__text Разработано
+        svg.copyright__icon(width="27" height="34")
+          use(xlink:href="#icon-logo-htmlacademy")
+
+  .overlay
+    section.modal
+      form.modal__form(action="#" method="post")
+        h2.modal__title Добавить в корзину
+        p.modal__choose Выберите размер:
+        .modal__size-chart
+          input.modal__input.visually-hidden(type="radio" id="size-S" name="size")
+          label.modal__label(for="size-S") S
+          input.modal__input.visually-hidden(type="radio" id="size-M" name="size")
+          label.modal__label(for="size-M") M
+          input.modal__input.visually-hidden(type="radio" id="size-L" name="size")
+          label.modal__label(for="size-L") L
+        button.button.modal__add.button--green(type="submit") Добавить

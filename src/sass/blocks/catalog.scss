@@ -12,6 +12,12 @@
   border: 1px solid #ececec;
 }
 
+.catalog__picture-link {
+  text-decoration: none;
+
+  background-color: #eaeaea;
+}
+
 .catalog__wrapper {
   width: 260px;
   margin: 0 auto;
@@ -22,6 +28,10 @@
   padding-right: 26px;
   padding-bottom: 8px;
   padding-left: 26px;
+}
+
+.catalog__title-link {
+  text-decoration: none;
 }
 
 .catalog__title {
@@ -56,6 +66,10 @@
   font-weight: 600;
   font-size: 15px;
   color: $color-black;
+}
+
+.catalog__basket {
+  text-decoration: none;
 }
 
 .catalog__icon {

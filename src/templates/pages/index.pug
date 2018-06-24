@@ -2,6 +2,39 @@ extends ../template
 
 block title
   title Главная страница
+block script-map
+  script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+
+  header.page-header
+    nav.main-nav.main-nav--closed.main-nav--nojs
+      .main-nav__wrapper
+        a.main-nav__logo
+          picture
+            source(media="(min-width: 1200px)" srcset="assets/images/icons/logo-desktop.svg")
+            source(media="(min-width: 768px)" srcset="assets/images/icons/logo-tablet.svg")
+            img.logo__image(src="assets/images/icons/logo-mobile.svg" alt="Мишка")
+        button.main-nav__toggle(type="button" title="Открыть/закрыть меню")
+          span.visually-hidden Открыть/закрыть меню
+        ul.main-nav__list.site-list
+          li.site-list__item
+            a.site-list__link(href="catalog.html") Каталог товаров
+          li.site-list__item
+            a.site-list__link(href="form.html") Вязание на заказ
+          li.site-list__item.site-list__item--new-goods
+            a.site-list__link(href="new-goods.html") Новые поступления
+          li.site-list__item.site-list__item--sale
+            a.site-list__link(href="sale.html") Распродажа
+        ul.main-nav__list.user-list
+          li.user-list__item.user-list__item--search
+            a.user-list__link(href="#") Поиск по сайту
+              svg.user-list__icon-search(width="18" height="19")
+                use(xlink:href="#icon-search")
+          li.user-list__item.user-list__item--basket
+            a.user-list__link(href="basket.html") Корзина: пока пуста
+              svg.user-list__icon-cart(width="21" height="18")
+                use(xlink:href="#icon-cart")
+          li.user-list__item.user-list__item--delivery
+            a.user-list__link.user-list__link--delivery(href="#") Бесплатная доставка по России
 
 block content
   main.page-main
@@ -11,12 +44,12 @@ block content
         h2.content-title Милые штуки ручной работы&nbsp;для&nbsp;дома
       ul.goods__list
         li.goods__item
-          a.goods__link.goods__link--bg--light(href="#")
+          a.goods__link.goods__link--bg--light(href="interior-items.html")
             span.goods__name Предметы интерьера
             svg.goods__icon.goods__icon--interior
               use(xlink:href="#icon-interior")
         li.goods__item
-          a.goods__link.goods__link--bg--dark(href="#")
+          a.goods__link.goods__link--bg--dark(href="toys.html")
             span.goods__name Детские игрушки
             svg.goods__icon.goods__icon--toy
               use(xlink:href="#icon-toy")
@@ -52,7 +85,7 @@ block content
           img.offer__picture(src="assets/images/content/triple-set-mobile@1x.jpg", srcset="assets/images/content/triple-set-mobile@2x.jpg 2x" alt="Вязанные корзинки: товар недели")
         .offer__buy
           b.offer__price Цена: 990 руб.
-          a.offer__button.button(href="form.html") Заказать
+          a.offer__button.button.btn-modal(href="knitted-baskets.html") Заказать
 
     section.advantages
       .advantages__wrapper
@@ -90,7 +123,7 @@ block content
             .reviews__toggles
               a.reviews__toggle.reviews__toggle--prev(href="#") Предыдущий отзыв
               a.reviews__toggle.reviews__toggle--next(href="#") Следующий отзыв
-        a.reviews__button.button(href="#") Написать
+        a.reviews__button.button(href="reviews.html") Написать
 
     section.contacts
       .contacts__wrapper
@@ -103,6 +136,43 @@ block content
             span.contacts__type адрес:
             p.contacts__value г.&nbsp;Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.19/8, офиc&nbsp;101
       .contacts__map
-        .map
-          img.map__image(src="http://placehold.it/320x457", alt="Как до нас добраться")
-      a.contacts__button.button(href="#") Напишите нам
+      a.contacts__button.button(href="feedbaack-form.html") Напишите нам
+
+block footer
+  footer.page-footer
+    .page-footer__wrapper
+      a.page-footer__logo
+        svg.page-footer__logo-image(width="102" height="33")
+          use(xlink:href="#icon-logo-footer")
+      .page-footer__social.social
+        ul.social__list
+          li.social__item
+            a.social__link.social-link--instagram(href="#")
+              svg.social__icon.social__icon--instagram(width="22" height="21")
+                use(xlink:href="#icon-insta")
+          li.social__item
+            a.social__link.social-link--facebook(href="#")
+              svg.social__icon.social__icon--facebook(width="15" height="29")
+                use(xlink:href="#icon-fb")
+          li.social__item
+            a.social__link.social-link--twitter(href="#")
+              svg.social__icon.social__icon--twitter(width="24" height="20")
+                use(xlink:href="#icon-twitter") 
+      a.page-footer__copyright.copyright(href="https://htmlacademy.ru")
+        b.copyright__text Разработано
+        svg.copyright__icon(width="27" height="34")
+          use(xlink:href="#icon-logo-htmlacademy")
+    
+  .overlay
+    section.modal
+      form.modal__form(action="#" method="post")
+        h2.modal__title Добавить в корзину
+        p.modal__choose Выберите размер:
+        .modal__size-chart
+          input.modal__input.visually-hidden(type="radio" id="size-S" name="size")
+          label.modal__label(for="size-S") S
+          input.modal__input.visually-hidden(type="radio" id="size-M" name="size")
+          label.modal__label(for="size-M") M
+          input.modal__input.visually-hidden(type="radio" id="size-L" name="size")
+          label.modal__label(for="size-L") L
+        button.button.modal__add.button--green(type="submit") Добавить
