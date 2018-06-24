@@ -14,6 +14,7 @@ const imagemin     = require("gulp-imagemin");
 const uglify       = require("gulp-uglify");
 const webp         = require("gulp-webp");
 const sass         = require('gulp-sass');
+const csso         = require('gulp-csso');
 const rename       = require('gulp-rename');
 const sourcemaps   = require('gulp-sourcemaps');
 
@@ -77,14 +78,11 @@ gulp.task('style', function () {
         return {title: "Style", message: err.message};
       })
     }))
-    .pipe(sourcemaps.init())
-    .pipe(sass({
-      outputStyle: 'compressed'
-    }))
+    .pipe(sass())
+    .pipe(csso())
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(sourcemaps.write())
     .pipe(rename({
       suffix: '.min'
     }))
