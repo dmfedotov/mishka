@@ -23,9 +23,11 @@
     "gulp-uglify": "^3.0.0",
     "gulp-webp": "^3.0.0",
     "normalize.css": "^8.0.0",
+    "postcss-uncss": "^0.16.1",
     "pug": "^2.0.3",
     "stylelint": "9.3.x",
-    "stylelint-config-htmlacademy": "0.1.x"
+    "stylelint-config-htmlacademy": "0.1.x",
+    "uncss": "^0.16.2"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
