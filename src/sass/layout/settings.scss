@@ -1,7 +1,11 @@
-*,
-*::before,
-*::after {
+html {
   box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 body,
@@ -18,26 +22,6 @@ html {
   background-color: $color-white;
 
   -webkit-font-smoothing: antialiased;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  list-style: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-
-  font-weight: normal;
 }
 
 img {

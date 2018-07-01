@@ -55,6 +55,11 @@
   }
 }
 
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+}
+
 .main-nav--closed .main-nav__toggle {
   background-image: url("../images/icons/icon-menu-open.svg");
   background-position: 0 4px;

@@ -11,6 +11,7 @@
 }
 
 .advantages__title {
+  margin: 0;
   margin-bottom: 2px;
   padding-top: 23px;
 
@@ -22,6 +23,8 @@
 .advantages__list {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
 .advantages__item {
@@ -29,6 +32,7 @@
 
   padding-top: 83px;
 
+  list-style-type: none;
   font-weight: 600;
   font-size: 17px;
   line-height: 1.2;

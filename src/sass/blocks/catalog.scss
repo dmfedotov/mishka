@@ -9,6 +9,8 @@
 .catalog__item {
   margin-bottom: 30px;
 
+  list-style-type: none;
+
   border: 1px solid #ececec;
 }
 
@@ -24,6 +26,11 @@
   padding-top: 30px;
 }
 
+.catalog__list {
+  margin: 0;
+  padding: 0;
+}
+
 .catalog__desc {
   padding-right: 26px;
   padding-bottom: 8px;
@@ -35,6 +42,7 @@
 }
 
 .catalog__title {
+  margin: 0;
   padding-top: 27px;
   padding-bottom: 7px;
 
