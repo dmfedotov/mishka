@@ -65,6 +65,7 @@ block content
               .catalog__price
                 span.catalog__price-value 1 200 руб.
                 a.catalog__basket.btn-modal(href="basket.html" title="Положить в корзину")
+                  span.visually-hidden Добавить в корзину
                   svg.catalog__icon(width="21" height="19")
                     use(xlink:href="#icon-cart")
           li.catalog__item
@@ -89,6 +90,7 @@ block content
               .catalog__price
                 span.catalog__price-value 690 руб.
                 a.catalog__basket.btn-modal(href="basket.html" title="Положить в корзину")
+                  span.visually-hidden Добавить в корзину
                   svg.catalog__icon(width="21" height="19")
                     use(xlink:href="#icon-cart")
           li.catalog__item
@@ -113,6 +115,7 @@ block content
               .catalog__price
                 span.catalog__price-value 1 500 руб.
                 a.catalog__basket.btn-modal(href="basket.html" title="Положить в корзину")
+                  span.visually-hidden Добавить в корзину
                   svg.catalog__icon(width="21" height="19")
                     use(xlink:href="#icon-cart")
     section.production
@@ -150,17 +153,21 @@ block footer
         ul.social__list
           li.social__item
             a.social__link.social-link--instagram(href="#")
+              span.visually-hidden Мы в Инстаграмме
               svg.social__icon.social__icon--instagram(width="22" height="21")
                 use(xlink:href="#icon-insta")
           li.social__item
             a.social__link.social-link--facebook(href="#")
+              span.visually-hidden Мы в Фейсбуке
               svg.social__icon.social__icon--facebook(width="15" height="29")
                 use(xlink:href="#icon-fb")
           li.social__item
             a.social__link.social-link--twitter(href="#")
+              span.visually-hidden Мы в Твитере
               svg.social__icon.social__icon--twitter(width="24" height="20")
                 use(xlink:href="#icon-twitter") 
       a.page-footer__copyright.copyright(href="https://htmlacademy.ru")
+        span.visually-hidden Html Academy
         b.copyright__text Разработано
         svg.copyright__icon(width="27" height="34")
           use(xlink:href="#icon-logo-htmlacademy")

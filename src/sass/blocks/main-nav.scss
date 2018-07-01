@@ -88,7 +88,7 @@
 
 @media (min-width: $tablet-width) {
   .main-nav {
-    height: 150px;
+    min-height: 150px;
   }
 
   .main-nav__wrapper {
