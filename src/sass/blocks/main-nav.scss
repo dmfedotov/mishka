@@ -17,6 +17,20 @@
   margin-bottom: 22px;
 }
 
+.main-nav__logo-image {
+  margin: 0 auto;
+
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .main-nav__toggle {
   position: absolute;
   top: 7px;
@@ -39,6 +53,11 @@
   &:active {
     opacity: 0.3;
   }
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
 }
 
 .main-nav--closed .main-nav__toggle {
@@ -69,7 +88,7 @@
 
 @media (min-width: $tablet-width) {
   .main-nav {
-    height: 150px;
+    min-height: 150px;
   }
 
   .main-nav__wrapper {

@@ -8,6 +8,7 @@ const htmlmin      = require('gulp-htmlmin');
 const autoprefixer = require('autoprefixer');
 const svgstore     = require('gulp-svgstore');
 const postcss      = require("gulp-postcss");
+const uncss        = require('postcss-uncss');
 const plumber      = require("gulp-plumber");
 const notify       = require("gulp-notify");
 const imagemin     = require("gulp-imagemin");
@@ -88,6 +89,16 @@ gulp.task('style', function () {
     }))
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(browserSync.stream());
+  });
+
+  // Удаление из css неиспользуемых стилей
+gulp.task('uncss', function () {
+  return gulp.src(paths.styles.dest)
+  .pipe(postcss([
+    uncss({
+      html: ['index.html', 'catalog.html', 'form.html']
+    })
+  ]))
 });
 
 // Оптимизация картинок
@@ -172,5 +183,6 @@ gulp.task('build', gulp.series(
   'webpImage',
   'style',
   'sprite',
-  'html'
+  'html',
+  'uncss'
 ));

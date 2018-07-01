@@ -2,9 +2,8 @@ extends ../template
 
 block title
   title Главная страница
-block script-map
-  script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
 
+block header
   header.page-header
     nav.main-nav.main-nav--closed.main-nav--nojs
       .main-nav__wrapper
@@ -12,7 +11,7 @@ block script-map
           picture
             source(media="(min-width: 1200px)" srcset="assets/images/icons/logo-desktop.svg")
             source(media="(min-width: 768px)" srcset="assets/images/icons/logo-tablet.svg")
-            img.logo__image(src="assets/images/icons/logo-mobile.svg" alt="Мишка")
+            img.main-nav__logo-image(src="assets/images/icons/logo-mobile.svg" alt="Мишка")
         button.main-nav__toggle(type="button" title="Открыть/закрыть меню")
           span.visually-hidden Открыть/закрыть меню
         ul.main-nav__list.site-list
@@ -41,17 +40,17 @@ block content
 
     section.goods
       header.goods__header
-        h2.content-title Милые штуки ручной работы&nbsp;для&nbsp;дома
+        h1.content-title Милые штуки ручной работы&nbsp;для&nbsp;дома
       ul.goods__list
         li.goods__item
-          a.goods__link.goods__link--bg--light(href="interior-items.html")
+          a.goods__link(href="interior-items.html")
             span.goods__name Предметы интерьера
-            svg.goods__icon.goods__icon--interior
+            svg.goods__icon.goods__icon--interior(width="62" height="62")
               use(xlink:href="#icon-interior")
         li.goods__item
           a.goods__link.goods__link--bg--dark(href="toys.html")
             span.goods__name Детские игрушки
-            svg.goods__icon.goods__icon--toy
+            svg.goods__icon.goods__icon--toy(width="62" height="62")
               use(xlink:href="#icon-toy")
 
     article.offer
@@ -127,7 +126,7 @@ block content
 
     section.contacts
       .contacts__wrapper
-        h3.contacts__title Контакты
+        h2.contacts__title Контакты
         .contacts__list
           .contacts__item
             span.contacts__type e-mail:
@@ -148,17 +147,21 @@ block footer
         ul.social__list
           li.social__item
             a.social__link.social-link--instagram(href="#")
+              span.visually-hidden Мы в Инстаграмме
               svg.social__icon.social__icon--instagram(width="22" height="21")
                 use(xlink:href="#icon-insta")
           li.social__item
             a.social__link.social-link--facebook(href="#")
+              span.visually-hidden Мы в Фейсбуке
               svg.social__icon.social__icon--facebook(width="15" height="29")
                 use(xlink:href="#icon-fb")
           li.social__item
             a.social__link.social-link--twitter(href="#")
+              span.visually-hidden Мы в Твитере
               svg.social__icon.social__icon--twitter(width="24" height="20")
                 use(xlink:href="#icon-twitter") 
       a.page-footer__copyright.copyright(href="https://htmlacademy.ru")
+        span.visually-hidden Html Academy
         b.copyright__text Разработано
         svg.copyright__icon(width="27" height="34")
           use(xlink:href="#icon-logo-htmlacademy")
@@ -176,3 +179,6 @@ block footer
           input.modal__input.visually-hidden(type="radio" id="size-L" name="size")
           label.modal__label(for="size-L") L
         button.button.modal__add.button--green(type="submit") Добавить
+
+block script-map
+  script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")

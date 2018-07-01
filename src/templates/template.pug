@@ -6,13 +6,18 @@ html(lang="ru")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     block title
       title Мишка
-    link(rel='stylesheet' href='assets/css/style.min.css')
+    link(rel="preload" href="assets/images/content/hero-desktop@1x.jpg" as="image")
+    link(rel="preload" href="assets/fonts/opensans.woff2" as="font")
+    link(rel="preload" href="assets/fonts/opensansbold.woff2" as="font")
+    link(rel="preload" href="assets/scripts/main.min.js" as="script")
+    link(rel="stylesheet" href="assets/css/style.min.css")
     script(src="assets/scripts/picturefill.min.js" async)
-    block script-map
   body
     .wrapper
       div(style="display: none")
         include ../../docs/assets/images/icons/sprite.svg
+      block header
       block content
       block footer
+    block script-map
     script(src="assets/scripts/main.min.js")

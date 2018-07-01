@@ -21,6 +21,15 @@
   padding-left: 30px;
 }
 
+.goods__list {
+  margin: 0;
+  padding: 0;
+}
+
+.goods__item {
+  list-style-type: none;
+}
+
 .goods__link {
   position: relative;
 
@@ -124,6 +133,8 @@
   .goods__header {
     width: 668px;
     margin: 0 auto;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   .goods__list {

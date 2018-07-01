@@ -3,6 +3,7 @@ extends ../template
 block title
   title Форма заказа
 
+block header
   header.page-header
   nav.main-nav.main-nav--closed.main-nav--nojs
     .main-nav__wrapper
@@ -10,7 +11,7 @@ block title
         picture
           source(media="(min-width: 1200px)" srcset="assets/images/icons/logo-desktop.svg")
           source(media="(min-width: 768px)" srcset="assets/images/icons/logo-tablet.svg")
-          img.logo__image(src="assets/images/icons/logo-mobile.svg" alt="Мишка")
+          img.main-nav__logo-image(src="assets/images/icons/logo-mobile.svg" alt="Мишка")
       button.main-nav__toggle(type="button" title="Открыть/закрыть меню")
         span.visually-hidden Открыть/закрыть меню
       ul.main-nav__list.site-list
@@ -39,7 +40,7 @@ block content
 
     section.order
       header.order__header
-        h2.content-title.content-title--form Вязание на заказ
+        h1.content-title.content-title--form Вязание на заказ
       .order__form
         form.form(action="#" method="post")
           .order__promo
@@ -50,52 +51,52 @@ block content
               .form__inner
                 label.form__field
                   input.form__radio-elem.visually-hidden(type="radio", id="radio-1" name="form-radio" checked)
-                  .form__radio-fake
-                  .form__value Аксессуар для интерьера
+                  span.form__radio-fake
+                  span.form__value Аксессуар для интерьера
                 label.form__field
                   input.form__radio-elem.visually-hidden(type="radio", id="radio-2" name="form-radio")
-                  .form__radio-fake
-                  .form__value Детская игрушка
+                  span.form__radio-fake
+                  span.form__value Детская игрушка
           .form__wrapper.form__wrapper--gray
             .form__section
               h3.form__type Цвет
               .form__inner.form__inner--columns
                 label.form__field
                   input.form__check-elem.visually-hidden(type="checkbox", id="check-1" name="form-check" checked)
-                  .form__check-fake
+                  span.form__check-fake
                     svg.form__check-icon(width="22" height="16")
                       use(xlink:href="#icon-tick")
-                  .form__value Белый
+                  span.form__value Белый
                 label.form__field
                   input.form__check-elem.visually-hidden(type="checkbox", id="check-2" name="form-check" checked)
-                  .form__check-fake
+                  span.form__check-fake
                     svg.form__check-icon(width="22" height="16")
                       use(xlink:href="#icon-tick")               
-                  .form__value Серый
+                  span.form__value Серый
                 label.form__field
                   input.form__check-elem.visually-hidden(type="checkbox", id="check-3" name="form-check")
-                  .form__check-fake
+                  span.form__check-fake
                     svg.form__check-icon(width="22" height="16")
                       use(xlink:href="#icon-tick")
-                  .form__value «Тиффани»
+                  span.form__value «Тиффани»
                 label.form__field
                   input.form__check-elem.visually-hidden(type="checkbox", id="check-4" name="form-check")
-                  .form__check-fake
+                  span.form__check-fake
                     svg.form__check-icon(width="22" height="16")
                       use(xlink:href="#icon-tick")
-                  .form__value Черный
+                  span.form__value Черный
                 label.form__field
                   input.form__check-elem.visually-hidden(type="checkbox", id="check-5" name="form-check")
-                  .form__check-fake
+                  span.form__check-fake
                     svg.form__check-icon(width="22" height="16")
                       use(xlink:href="#icon-tick")
-                  .form__value Розовый
+                  span.form__value Розовый
                 label.form__field
                   input.form__check-elem.visually-hidden(type="checkbox", id="check-6" name="form-check")
-                  .form__check-fake
+                  span.form__check-fake
                     svg.form__check-icon(width="22" height="16")
                       use(xlink:href="#icon-tick")
-                  .form__value Оранжевый
+                  span.form__value Оранжевый
           .form__wrapper.form__wrapper--name
             .form__section
               h3.form__type ФИО
@@ -115,14 +116,14 @@ block content
               .form__inner
                 .form__field
                   input.form__input(type="tel", name="form-phone" placeholder="+7 ХХХ ХХ ХХ*")
-                  svg.form__input-icon(width="25" height="24")
+                  svg.form__input-icon.form__input-icon--phone(width="25" height="24")
                     use(xlink:href="#icon-phone")
             .form__section
-              h3.form__type.form__type_margin_bottom e-mail
+              h3.form__type.form__type--margin--bottom e-mail
               .form__inner
                 .form__field
                   input.form__input(type="email", name="form-email" placeholder="Ваш Email*")
-                  svg.form__input-icon(width="32" height="21")
+                  svg.form__input-icon.form__input-icon--mail(width="32" height="32")
                     use(xlink:href="#icon-mail")
           .form__wrapper.form__wrapper--comment
             .form__section
@@ -144,17 +145,21 @@ block footer
         ul.social__list
           li.social__item
             a.social__link.social-link--instagram(href="#")
+              span.visually-hidden Мы в Инстаграмме
               svg.social__icon.social__icon--instagram(width="22" height="21")
                 use(xlink:href="#icon-insta")
           li.social__item
             a.social__link.social-link--facebook(href="#")
+              span.visually-hidden Мы в Фейсбуке
               svg.social__icon.social__icon--facebook(width="15" height="29")
                 use(xlink:href="#icon-fb")
           li.social__item
             a.social__link.social-link--twitter(href="#")
+              span.visually-hidden Мы в Твитере
               svg.social__icon.social__icon--twitter(width="24" height="20")
                 use(xlink:href="#icon-twitter") 
       a.page-footer__copyright.copyright(href="https://htmlacademy.ru")
+        span.visually-hidden Html Academy
         b.copyright__text Разработано
         svg.copyright__icon(width="27" height="34")
           use(xlink:href="#icon-logo-htmlacademy")

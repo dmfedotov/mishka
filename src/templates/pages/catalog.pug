@@ -3,6 +3,7 @@ extends ../template
 block title
   title Каталог товаров
 
+block header
   header.page-header
   nav.main-nav.main-nav--closed.main-nav--nojs
     .main-nav__wrapper
@@ -10,7 +11,7 @@ block title
         picture
           source(media="(min-width: 1200px)" srcset="assets/images/icons/logo-desktop.svg")
           source(media="(min-width: 768px)" srcset="assets/images/icons/logo-tablet.svg")
-          img.logo__image(src="assets/images/icons/logo-mobile.svg" alt="Мишка")
+          img.main-nav__logo-image(src="assets/images/icons/logo-mobile.svg" alt="Мишка")
       button.main-nav__toggle(type="button" title="Открыть/закрыть меню")
         span.visually-hidden Открыть/закрыть меню
       ul.main-nav__list.site-list
@@ -39,7 +40,7 @@ block content
 
     section.catalog
       header.catalog__header
-        h2.content-title.content-title--catalog Каталог товаров
+        h1.content-title.content-title--catalog Каталог товаров
       .catalog__wrapper
         ul.catalog__list
           li.catalog__item
@@ -59,11 +60,12 @@ block content
                 img.catalog__picture(src="assets/images/content/photo-hare-mobile@1x.jpg", srcset="assets/images/content/photo-hare-mobile@2x.jpg 2x" alt="Зайчик попрыгайчик")
             .catalog__desc
               a.catalog__title-link(href="bunny.html")
-                h2.catalog__title Зайчик-попрыгайчик
+                h3.catalog__title Зайчик-попрыгайчик
               p.catalog__info Рост 30 см, вес 200 г
               .catalog__price
                 span.catalog__price-value 1 200 руб.
                 a.catalog__basket.btn-modal(href="basket.html" title="Положить в корзину")
+                  span.visually-hidden Добавить в корзину
                   svg.catalog__icon(width="21" height="19")
                     use(xlink:href="#icon-cart")
           li.catalog__item
@@ -83,11 +85,12 @@ block content
                 img.catalog__picture(src="assets/images/content/photo-bowl-mobile@1x.jpg", srcset="assets/images/content/photo-bowl-mobile@2x.jpg 2x" alt="Корзинка для белья")
             .catalog__desc
               a.catalog__title-link(href="bowl.html")
-                h2.catalog__title Корзинка для белья
+                h3.catalog__title Корзинка для белья
               p.catalog__info Диаметр 15 см, высота 10 см
               .catalog__price
                 span.catalog__price-value 690 руб.
                 a.catalog__basket.btn-modal(href="basket.html" title="Положить в корзину")
+                  span.visually-hidden Добавить в корзину
                   svg.catalog__icon(width="21" height="19")
                     use(xlink:href="#icon-cart")
           li.catalog__item
@@ -107,16 +110,17 @@ block content
                 img.catalog__picture(src="assets/images/content/photo-toys-mobile@1x.jpg", srcset="assets/images/content/photo-toys-mobile@2x.jpg 2x" alt="Большая корзинка для игрушек")
             .catalog__desc
               a.catalog__title-link(href="toy.html")
-                h2.catalog__title Большая корзинка для игрушек
+                h3.catalog__title Большая корзинка для игрушек
               p.catalog__info Диаметр 30 см, высота 30 см
               .catalog__price
                 span.catalog__price-value 1 500 руб.
                 a.catalog__basket.btn-modal(href="basket.html" title="Положить в корзину")
+                  span.visually-hidden Добавить в корзину
                   svg.catalog__icon(width="21" height="19")
                     use(xlink:href="#icon-cart")
     section.production
       .production__wrapper
-        h2.production__title Процесс производства
+        h3.production__title Процесс производства
           svg.production__icon(width="33" height="22")
             use(xlink:href="#icon-video")
         .production__videoplayer.videoplayer
@@ -149,17 +153,21 @@ block footer
         ul.social__list
           li.social__item
             a.social__link.social-link--instagram(href="#")
+              span.visually-hidden Мы в Инстаграмме
               svg.social__icon.social__icon--instagram(width="22" height="21")
                 use(xlink:href="#icon-insta")
           li.social__item
             a.social__link.social-link--facebook(href="#")
+              span.visually-hidden Мы в Фейсбуке
               svg.social__icon.social__icon--facebook(width="15" height="29")
                 use(xlink:href="#icon-fb")
           li.social__item
             a.social__link.social-link--twitter(href="#")
+              span.visually-hidden Мы в Твитере
               svg.social__icon.social__icon--twitter(width="24" height="20")
                 use(xlink:href="#icon-twitter") 
       a.page-footer__copyright.copyright(href="https://htmlacademy.ru")
+        span.visually-hidden Html Academy
         b.copyright__text Разработано
         svg.copyright__icon(width="27" height="34")
           use(xlink:href="#icon-logo-htmlacademy")
