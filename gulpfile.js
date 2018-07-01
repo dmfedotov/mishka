@@ -90,15 +90,15 @@ gulp.task('style', function () {
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(browserSync.stream());
   });
-  
+
   // Удаление из css неиспользуемых стилей
-  gulp.task('uncss', function () {
-    return gulp.src(paths.styles.dest)
-    .pipe(postcss([
-      uncss({
-        html: ['index.html', 'catalog.html', 'form.html']
-      })
-    ]))
+gulp.task('uncss', function () {
+  return gulp.src(paths.styles.dest)
+  .pipe(postcss([
+    uncss({
+      html: ['index.html', 'catalog.html', 'form.html']
+    })
+  ]))
 });
 
 // Оптимизация картинок

@@ -22,12 +22,11 @@
   [].forEach.call(modalBtns, function (item) {
     item.addEventListener("click", function (e) {
       e.preventDefault();
-  
+
       modal.classList.add("modal--show");
       overlay.classList.add("overlay--show");
     });
   });
-  
 
   // Закрытие по клику на оверлей
   overlay.addEventListener("click", function () {
