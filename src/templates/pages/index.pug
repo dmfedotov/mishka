@@ -3,7 +3,7 @@ extends ../template
 block title
   title Главная страница
 
-
+block header
   header.page-header
     nav.main-nav.main-nav--closed.main-nav--nojs
       .main-nav__wrapper
@@ -11,7 +11,7 @@ block title
           picture
             source(media="(min-width: 1200px)" srcset="assets/images/icons/logo-desktop.svg")
             source(media="(min-width: 768px)" srcset="assets/images/icons/logo-tablet.svg")
-            img.logo__image(src="assets/images/icons/logo-mobile.svg" alt="Мишка")
+            img.main-nav__logo-image(src="assets/images/icons/logo-mobile.svg" alt="Мишка")
         button.main-nav__toggle(type="button" title="Открыть/закрыть меню")
           span.visually-hidden Открыть/закрыть меню
         ul.main-nav__list.site-list
