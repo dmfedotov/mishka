@@ -121,9 +121,7 @@
     padding-bottom: 33px;
     padding-left: 50px;
 
-    background-image: url("../images/content/review@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+    background: $color-white url("../images/content/review@1x.jpg") no-repeat top left;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../images/content/review@2x.jpg");
